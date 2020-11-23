@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>index</title>
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1" />
+
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/common.css">
+	<link rel="stylesheet" type="text/css" href="./lib/swiper/swiper.css">
+	<link rel="stylesheet" type="text/css" href="./css/portfolio.css">
+
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./lib/smooth-scrollbar/smooth-scrollbar.js"></script>
+	<script src="./lib/swiper/swiper.js"></script>
+
+
+	<style>
+		/* .header-nav > li:nth-child(1) a{
+			color: #fff;
+		}
+		.header-nav > li:nth-child(1) > a::after{
+			opacity: 1;
+			animation: snbunderline 0.6s forwards;
+			animation-delay: 0.8s;
+		}
+		@keyframes snbunderline{
+			0%{
+				width: 0%;
+			}
+			100%{
+				width: 100%;
+			}
+		} */
+	</style>
+	<script>
+        var Scrollbar = window.Scrollbar;
+      
+        Scrollbar.init(document.querySelector('#wrap'), options);
+    </script>
+</head>
+<body>
+<div id="wrap" data-scrollbar>
+	<header>
+		<div class="header-wrap">
+			<div class="header-logo">
+				<a href="#">HYEMIN</a>
+			</div>
+			<nav class="header-nav">
+				<li><a href="#">PROJECTS</a></li>
+				<li><a href="#">ABILITY</a></li>
+				<li><a href="#">ABOUT</a></li>
+				<li><a href="#">CONTACT</a></li>
+			</nav>
+		</div>
+	</header>
+	<div class="content-wrap">
+		<div class="slide">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="./img/main_img01.jpg" alt="슬라이드 이미지 입니다">
+					</div>
+					<div class="swiper-slide">
+						<img src="./img/main_img02.jpg" alt="슬라이드 이미지 입니다">
+					</div>
+				</div>
+				<!-- Add Pagination --> 
+				<div class="swiper-pagination"></div>
+				<!-- Add Arrows -->
+				<div class="slide-button-prev">
+					<svg viewBox="0 0 24 24">
+						<path d="M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z"/>
+					</svg>
+				</div>
+				<div class="slide-button-next">
+					<svg viewBox="0 0 24 24">
+						<path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer></footer>
+</div>
+
+	
+<script src="./js/portfolio.js"></script>
+<script> Scrollbar.initAll(); </script>
+</body>
+</html>
