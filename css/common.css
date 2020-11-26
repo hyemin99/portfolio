@@ -85,3 +85,30 @@ header a{
 	transition: 0.6s ease;
 	opacity: 1;
 }
+/* page btn */
+.go-page{
+	display: block;
+	margin-top: 50px;
+	border: solid 1px #999;
+	color: #999;
+	line-height: 30px;
+	text-align: center;
+	width: 200px;
+	transition: 0.3s ease;
+}
+.go-page:hover{
+	border: solid 1px #fff;
+	color: #fff;
+	transition: 0.5s ease;
+}
+.go-page svg{
+	fill: #aaa;
+	transform: translateX(0);
+	margin-left: 10px;
+	transition: 0.3s ease;
+}
+.go-page:hover svg{
+	fill: #fff;
+	transform: translateX(14px);
+	transition: 0.5s ease;
+}

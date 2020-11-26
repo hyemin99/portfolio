@@ -39,6 +39,7 @@ $(function(){
         el: '.swiper-pagination',
         clickable: true,
       },
+      grabCursor: true,
       reverseDirection: true,
       navigation: {
         nextEl: '.slide-button-next',

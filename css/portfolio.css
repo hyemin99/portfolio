@@ -17,9 +17,8 @@
     width: fit-content !important;
     height: fit-content !important;
     left: 80% !important;
-    top: 40% !important;
+    top: 30% !important;
     z-index: 999;
-    transform: rotate(90deg);
 }
 .swiper-pagination-bullet{
     background-color: rgba(255, 255, 255, 0.8);
@@ -41,7 +40,7 @@
     background: url('../img/back03.jpg') no-repeat top left / cover;
 }
 
-/* 텍스트 그룹 */
+/* 슬라이드 텍스트 그룹 ***************************/
 .project-info{
     position: absolute;
     color: #fff;
@@ -55,12 +54,13 @@
     font-size: 3vw;
     height: 3vw;
     overflow: hidden;
+    text-transform: uppercase;
 }
 .project-txt{
     margin-top: 4%;
     font-size: 14px;
     color: #aaa;
-    line-height: 1.7;
+    line-height: 2;
 }
 
 /* 애니메이션 제어 */
@@ -81,8 +81,10 @@
 .project-info.on .project-txt span:nth-child(2){
     transition-delay: 0.3s;
 }
-
-/* img 그룹 전체 */
+.project-info.on .page-btn{
+    transition-delay: 0.4s;
+}
+/* img 그룹 전체  ***************************/
 .img-group{
     position: absolute;
     width: 100%;
@@ -103,6 +105,7 @@
         opacity: 1;
     }
 }
+/* 왼쪽에서 나오는 프로젝트 사진 */
 .img-right{
     width: 50%;
     height: fit-content;
@@ -193,8 +196,15 @@
     height: 80px;
     border: solid 1px #fff;
 }
+.comet05{
+    left: 25%;
+    top: 30%;
+    width: 100px;
+    height: 100px;
+    border: solid 1px #fff;
+}
 
-/* 고정 별들 */
+/* 고정 별들  ***************************/
 .stars{
     position: absolute;
     width: 6px;
