@@ -59,10 +59,12 @@
 .project-txt{
     margin-top: 4%;
     font-size: 14px;
-    color: #aaa;
+    color: rgba(255, 255, 255, 0.7);
     line-height: 2;
 }
-
+.go-page{
+    margin-top: 50px;
+}
 /* 애니메이션 제어 */
 .project-info span{
     display: block;
@@ -108,10 +110,9 @@
 /* 왼쪽에서 나오는 프로젝트 사진 */
 .img-right{
     width: 50%;
-    height: fit-content;
+    top: 0;
     left: -10%;
-    top: 50%;
-    transform: translateY(-50%);
+    height: 100%;
     z-index: 900;
     padding: 0 5%;
     transition: all ease-in-out 1s;
@@ -120,6 +121,9 @@
 }
 .img-right img{
     width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .vips-img{
     padding-top: 5%;
@@ -249,8 +253,43 @@
     bottom: 30%;
     animation-delay: 1.5s;
 }
-.project{
+
+/* **********about************************** */
+#about{
+    position: relative;
     width: 100%;
-    height: 500px;
-    border: solid 10px red;
+    height: 100vh;
+    overflow: hidden;
 }
+.my-info{
+    height: 50vh;
+    color: #fff;
+    text-transform: uppercase;
+}
+.info-box{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    z-index: 1;
+}
+.back-txt-ani{
+    width: 100%;
+    opacity: 0.5;
+    position: absolute;
+    height: 25vh;
+    top: 20%;
+    background: url('./../img/back-ainmation.png');
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    animation: bg-ani 70s linear infinite;
+    z-index: 0;
+}
+@keyframes bg-ani {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -10000px 0;
+    }
+  }
