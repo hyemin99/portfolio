@@ -30,7 +30,6 @@ $(function(){
     $('.swiper-slide-active div').removeClass('on');
     $('.swiper-slide-active p').removeClass('on');
 
-    var menu = [' ', ' ', ' ']
     var swiper = new Swiper('.swiper-container', {
       initialSlide : 2,
       effect : 'fade',
@@ -39,9 +38,6 @@ $(function(){
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
-        renderBullet : function(index, className){
-          return '<span class="' + className + '">' + (menu[index]) + '</span>';
-        }
       },
       reverseDirection: true,
       navigation: {

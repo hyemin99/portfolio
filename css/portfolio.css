@@ -1,18 +1,3 @@
-/* .content-wrap{
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    height: 5000px;
-}
-.slide{
-    width: 100%;
-    position: relative;
-}
-.swiper-container{
-    width: 70%;
-    position: absolute;
-    top: 0; left: 0;
-} */
 .content-wrap{
     width: 100%;
     overflow: hidden;
@@ -24,75 +9,24 @@
     position: relative;
     height: 100vh;
 }
-/* .swiper-container{
-    width: 60%;
-    position: absolute;
-    top:0; left: -5%;
-    opacity: 0;
-    transition: 0.5s ease;
-}
-.swiper-containe img{
-    width: 100%;
-    transform: scale(1.2);
-}
-.swiper-pagination{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    border: solid 10px red;
-    height: fit-content;
-} */
-/* swiprer pagination cutom */
 .swiper-container{
     width: 100%;
     height: 100vh;
 }
 .swiper-pagination{
-    bottom: 10% !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    left: 80% !important;
+    top: 40% !important;
     z-index: 999;
+    transform: rotate(90deg);
 }
-.swiper-pagination .swiper-pagination-bullet{
-    position: relative;
-    width: auto;
-    height: auto;
-    border-radius: 0;
-    color: #fff;
-    opacity: 1;
-    background-color: transparent;
-    font-size: 20px;
-    font-weight: 500;
-    margin: 0 10px !important;
+.swiper-pagination-bullet{
+    background-color: rgba(255, 255, 255, 0.8);
 }
-.swiper-pagination .swiper-pagination-bullet::before{
-    content: "";
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: #fff;
-    opacity: 0.5;
-}
-.swiper-pagination .swiper-pagination-bullet::after{
-    content: "";
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    width: 0;
-    height: 3px;
+.swiper-pagination-bullet-active{
     background-color: #fff;
 }
-.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::after{
-    width: 100%;
-    animation: paginationLine 5s linear;
-}
-@keyframes paginationLine{
-    0%{
-        width: 0;
-    }
-}
-
 .swiper-slide {
     position: relative;
     border: transparent;
@@ -108,16 +42,45 @@
 }
 
 /* 텍스트 그룹 */
-.project-txt{
+.project-info{
     position: absolute;
     color: #fff;
     top: 50%;
-    left: 55%;
+    left: 50%;
     transform: translateY(-50%);
     width: 40%;
-    border: solid 10px red;
+    z-index: 500;
+}
+.project-tit{
+    font-size: 3vw;
+    height: 3vw;
+    overflow: hidden;
+}
+.project-txt{
+    margin-top: 4%;
+    font-size: 14px;
+    color: #aaa;
+    line-height: 1.7;
 }
 
+/* 애니메이션 제어 */
+.project-info span{
+    display: block;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.2s ease;
+}
+.project-info.on span{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.8s ease;
+}
+.project-info.on .project-txt span{
+    transition-delay: 0.2s;
+}
+.project-info.on .project-txt span:nth-child(2){
+    transition-delay: 0.3s;
+}
 
 /* img 그룹 전체 */
 .img-group{
@@ -141,7 +104,7 @@
     }
 }
 .img-right{
-    width: fit-content;
+    width: 50%;
     height: fit-content;
     left: -10%;
     top: 50%;
@@ -264,17 +227,18 @@
     width: 10px;
     height: 10px;
     animation-delay: 2s;
+    transform: rotate(55deg);
 }
 .stars:nth-child(4){
     bottom: 10%;
     left: 50%;
+    transform: rotate(25deg);
 }
 .stars:nth-child(5){
     right: 10%;
     bottom: 30%;
     animation-delay: 1.5s;
 }
-
 .project{
     width: 100%;
     height: 500px;

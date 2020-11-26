@@ -1,0 +1,26 @@
+
+@media all and (max-width:1200px) { 
+	#wrap{
+        border: solid 10px red;
+	}
+ }
+ @media all and (max-width:1024px) { 
+	#wrap{
+        border: solid 10px yellow;
+	}
+ }
+@media all and (max-width:768px) { 
+	#wrap{
+        border: solid 10px blue;
+	}
+ }
+@media all and (max-width:480px) { 
+	#wrap{
+        border: solid 10px green;
+	}
+ }
+ @media all and (max-width:320px) { 
+	#wrap{
+        border: solid 10px palevioletred;
+	}
+ }
