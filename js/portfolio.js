@@ -14,7 +14,7 @@ $(function(){
       }
     });
     $('.swiper-slide').mousemove(function(e){
-      $('.img-single').each(function(){
+      $('.img-single, .img-single02').each(function(){
         var layers = $(this).attr('data-val');
         var x = ($(window).innerWidth() - event.pageX * layers) / 100;
         var y = ($(window).innerHeight() - event.pageY * layers) / 100;
@@ -22,11 +22,15 @@ $(function(){
       });
     });
 
+    // 별이 빛나는 밤밤 헤헿
+    var cloneStrars = $('.stars-wrap').clone();
+    cloneStrars .appendTo('.main-slide02, .main-slide03');
+
     //속성 초기화 
     $('.swiper-slide-active div').removeClass('on');
     $('.swiper-slide-active p').removeClass('on');
 
-    var menu = ['i love renewal', 'i love digine', 'i love projicet']
+    var menu = [' ', ' ', ' ']
     var swiper = new Swiper('.swiper-container', {
       initialSlide : 2,
       effect : 'fade',

@@ -62,7 +62,7 @@
     background-color: transparent;
     font-size: 20px;
     font-weight: 500;
-    margin: 0 50px !important;
+    margin: 0 10px !important;
 }
 .swiper-pagination .swiper-pagination-bullet::before{
     content: "";
@@ -95,63 +95,76 @@
 
 .swiper-slide {
     position: relative;
+    border: transparent;
 }
 .main-slide{
-    background: rgb(237,124,72);
-    background: linear-gradient(2deg, rgba(237,124,72,1) 0%, rgba(110,43,169,1) 19%, rgba(0,0,0,1) 53%);
+    background: url('../img/back01.jpg') no-repeat top left / cover;
 }
 .main-slide02{
-    background-color: #2e3548;
+    background: url('../img/back02.jpg') no-repeat top left / cover;
 }
 .main-slide03{
-    background-color: #2e3548;
+    background: url('../img/back03.jpg') no-repeat top left / cover;
 }
-.backimg{
-    position: absolute;
-    width: 100%;
-    left: 0;
-}
-.back-top01{
-    bottom: 0.5%;
-    z-index: 1;
-}
-.back-top02{
-    bottom: 0;
-    z-index: 3;
-}
-.slide-tit p{
+
+/* 텍스트 그룹 */
+.project-txt{
     position: absolute;
     color: #fff;
-    font-size: 200px;
-    font-weight: 900;
-    left: 100%;
-    opacity: 0;
-    transition: cubic-bezier(.66,.51,.02,.98) 2s;
+    top: 50%;
+    left: 55%;
+    transform: translateY(-50%);
+    width: 40%;
+    border: solid 10px red;
 }
-.slide-tit p.on{
-    opacity: 1;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.tit-top{
-    top: 10%;
-}
-.tit-middle{
-    top: 35%;
-    z-index: 2;
-}
-.tit-bottom{
-    top: 60%;
-    z-index: 1;
-}
+
+
+/* img 그룹 전체 */
 .img-group{
     position: absolute;
     width: 100%;
     height: 100%;
-    left: 100%;
-    top: 0;
-    transition:  all cubic-bezier(.97,.02,.02,.98) 2s;
     /* transition: all cubic-bezier(.66,.51,.02,.98) 2s; */
+}
+.img-left{
+    top: -100%;
+    left: 100%;
+    transition: all cubic-bezier(.10,.50,.60,.98) 5s;
+    animation: comet ease 5s;
+}
+@keyframes comet{
+    30%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.img-right{
+    width: fit-content;
+    height: fit-content;
+    left: -10%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 900;
+    padding: 0 5%;
+    transition: all ease-in-out 1s;
+    opacity: 0;
+    transition: all cubic-bezier(.97,.02,.02,.98) 1s; 
+}
+.img-right img{
+    width: 100%;
+}
+.vips-img{
+    padding-top: 5%;
+}
+.img-left.on{
+    top: 0;
+    left: 5%;
+}
+.img-right.on{
+    left: 0;
+    opacity: 1;
 }
 .img-single{
     position: absolute;
@@ -163,16 +176,13 @@
     transition:  all linear .1s;
     animation: rotateReversed02 linear 3s;
 }
-.img-group.on{
-    left: 5%;
-}
 @keyframes rotateReversed{
-    to{
+    100%{
         transform: rotate(-360deg);
     }
 }
 @keyframes rotateReversed02{
-    to{
+    100%{
         transform: rotate(360deg);
     }
 }
@@ -180,7 +190,7 @@
     animation: rotate linear 300s infinite;
 }
 @keyframes rotate{
-    to{
+    100%{
         transform: rotate(720deg);
     }
 }
@@ -188,33 +198,85 @@
     animation: rotate02 linear 300s infinite;
 }
 @keyframes rotate02{
-    to{
+    100%{
         transform: rotate(-720deg);
     }
 }
-.donut1{
+.comet01{
     left: 10%;
     top: 20%;
+    width: 100px;
+    height: 100px;
+    border: solid 1px #fff;
 }
-.donut2{
+.comet02{
     left: 0%;
     top: 45%;
-    z-index: 5;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
 }
-.donut3{
+.comet03{
     left: 50%;
     top: 30%;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
 }
-.donut4{
+.comet04{
     left: 70%;
-    top: 65%;
-    z-index: 2;
+    top: 65%; 
+    width: 80px;
+    height: 80px;
+    border: solid 1px #fff;
+}
+
+/* 고정 별들 */
+.stars{
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    animation: star-light ease-in-out 3s infinite alternate;
+    z-index: 0;
+}
+@keyframes star-light{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.stars:nth-child(1){
+    top: 10%;
+    left: 30%;
+    transform: rotate(45deg);
+}
+.stars:nth-child(2){
+    top: 30%;
+    left: 15%;
+    animation-delay: 3s;
+}
+.stars:nth-child(3){
+    top: 10%;
+    right: 20%;
+    width: 10px;
+    height: 10px;
+    animation-delay: 2s;
+}
+.stars:nth-child(4){
+    bottom: 10%;
+    left: 50%;
+}
+.stars:nth-child(5){
+    right: 10%;
+    bottom: 30%;
+    animation-delay: 1.5s;
 }
 
 .project{
-    margin-top: 200px;
     width: 100%;
     height: 500px;
     border: solid 10px red;
 }
-
