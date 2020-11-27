@@ -58,7 +58,7 @@
 }
 .project-txt{
     margin-top: 4%;
-    font-size: 14px;
+    font-size: 16px;
     color: rgba(255, 255, 255, 0.7);
     line-height: 2;
 }
@@ -254,31 +254,84 @@
     animation-delay: 1.5s;
 }
 
+
+/* ********** main common *********** */
+.tit-name{
+    color: #fff;
+    font-weight: 800;
+}
+.tit-name > p{
+    margin-top: 10px;
+    font-size: 6.38vw;
+    text-transform: uppercase;
+}
+.sub-tit-name{
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 20px;
+}
+.txt{
+    margin-top: 1vh;
+    color: #fff;
+    font-size: 100%;
+    font-weight: 400;
+    line-height: 1.7;
+    font-size: 16px;
+}
 /* **********about************************** */
 #about{
     position: relative;
     width: 100%;
-    height: 100vh;
     overflow: hidden;
+    margin-top: 20vh;
 }
 .my-info{
-    height: 50vh;
     color: #fff;
-    text-transform: uppercase;
-}
-.info-box{
-    position: relative;
-    height: 100%;
-    width: 100%;
     background-color: #000;
-    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
 }
+.info-left,
+.info-right{
+    margin-top: 5vh;
+    width: 45%;
+}
+.info-left{
+    float: left;
+}
+.sns-icons {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+.sns-icons li{
+    float: left;
+    margin-right: 20px;
+}
+.sns-icons svg{
+    fill: rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+}
+.sns-icons a:hover> svg{
+    fill: #fff;
+    transition: 0.6s ease;
+}
+.info-right{
+    float: right;
+}
+.education{
+    margin-top: 3vh;
+}
+
+/* ------------ */
 .back-txt-ani{
     width: 100%;
     opacity: 0.5;
     position: absolute;
     height: 25vh;
-    top: 20%;
+    top: 50%;
     background: url('./../img/back-ainmation.png');
     background-repeat: repeat-x;
     background-position: 0 0;
@@ -293,3 +346,10 @@
       background-position: -10000px 0;
     }
   }
+  .ability{
+    height: 50vh;
+}
+
+
+
+  

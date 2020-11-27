@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
-/*font-family: 'Nanum Myeongjo', serif;*/
+/*font-family: 'Nanum Myeongjo', serif; 4,7,8*/
 html{scroll-behavior: smooth;}
 body{
 	font-family: 'Nanum Gothic', sans-serif;
+	font-weight: 400;
 	font-size: 0.75em;
 }
+/* 
+* { background-color: rgba(255,0,0,.2); }
+* * { background-color: rgba(0,255,0,.2); }
+* * * { background-color: rgba(0,0,255,.2); }
+* * * * { background-color: rgba(255,0,255,.2); }
+* * * * * { background-color: rgba(0,255,255,.2); }
+* * * * * * { background-color: rgba(255,255,0,.2); }
+* * * * * * * { background-color: rgba(255,0,0,.2); }
+* * * * * * * * { background-color: rgba(0,255,0,.2); }
+* * * * * * * * * { background-color: rgba(0,0,255,.2); } */
 /* ---------------------------------------- */
 svg{
 	vertical-align: middle;
@@ -13,7 +24,14 @@ svg{
 	width: 80%;
 	margin: 0 auto;
 }
-
+.widt70{
+	width: 70%;
+	margin: 0 auto;
+}
+.uppercase, 
+.uppercase a{
+	text-transform: uppercase;
+}
 /* ---------------------------------------- */
 /* #wrap{
 	background: black;
@@ -114,4 +132,44 @@ header a{
 	fill: #fff;
 	transform: translateX(14px);
 	transition: 0.5s ease;
+}
+.scroll-ani{
+	position: fixed;
+	right: -60px;
+	bottom: -110px;
+	color: #fff;
+	transform: rotate(-90deg);
+	transform-origin: left bottom;
+	overflow: hidden;
+	z-index: 999;
+}
+.scroll-ani > div{
+	width: 50px;
+	text-align: center;
+	height: 20px;
+	float: left;
+	line-height: 20px;
+	overflow: hidden;
+}
+.scroll-action{
+	position: relative;
+	margin-right: 10px;
+}
+.scroll-action::after{
+	content: "";
+	width: 50px;
+	height: 1px;
+	position: absolute;
+	left: 100%;
+	top: 50%;
+	background-color: #fff;
+	animation: scroll-animation 3s infinite cubic-bezier(.9,.4,.05,.2); 
+}
+@keyframes scroll-animation{
+	0%{
+		left: 100%;
+	}
+	100%{
+		left: -200%;
+	}
 }
