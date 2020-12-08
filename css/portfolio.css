@@ -44,8 +44,8 @@
 }
 
 .swiper-pagination{
-    width: fit-content !important;
-    height: fit-content !important;
+    width: 100px !important;
+    height: 20px !important;
     left: 80% !important;
     top: 30% !important;
     z-index: 999;
@@ -54,7 +54,8 @@
     background-color: rgba(255, 255, 255, 0.8);
 }
 .swiper-pagination-bullet-active{
-    background-color: #fff;
+    background-color: blue;
+    /* point */
 }
 .swiper-slide {
     position: relative;
@@ -93,7 +94,7 @@
     line-height: 2;
 }
 .go-page{
-    margin-top: 50px;
+    margin-top: 30px;
 }
 /* 애니메이션 제어 */
 .project-info span{
@@ -299,7 +300,8 @@
     text-transform: uppercase;
     font-weight: 800;
     font-size: 20px;
-    color: #739;
+    color: blue;
+    /* point */
 }
 .txt{
     margin-top: 1vh;
@@ -331,7 +333,8 @@
 .info-left{
     float: left;
 }
-.sns-icons {
+/* 가로형 */
+/* .sns-icons {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -340,7 +343,7 @@
 .sns-icons li{
     float: left;
     margin-right: 20px;
-}
+}*/
 .sns-icons svg{
     fill: rgba(255, 255, 255, 0.5);
     transition: 0.3s ease;
@@ -348,24 +351,37 @@
 .sns-icons a:hover> svg{
     fill: #fff;
     transition: 0.6s ease;
-}
+} 
+/* 세로형 */
 .info-right{
     float: right;
+    /* 세로형 속성 */
+    position: relative;
 }
 .education{
     margin-top: 3vh;
 }
+.sns-icons{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sns-icons li{
+    margin-top: 14px;
+}
 /* ------------ */
+/* 백그라운드 애니메이션 */
 .back-txt-ani{
     width: 100%;
-    opacity: 0.5;
+    opacity: 1;
     position: absolute;
     height: 25vh;
     top: 50%;
     background: url('./../img/back-ainmation.png');
     background-repeat: repeat-x;
     background-position: 0 0;
-    animation: bg-ani 70s linear infinite;
+    animation: bg-ani 100s linear infinite;
     z-index: 0;
 }
 @keyframes bg-ani {
