@@ -334,7 +334,7 @@
     float: left;
 }
 /* 가로형 */
-/* .sns-icons {
+.sns-icons {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -343,7 +343,7 @@
 .sns-icons li{
     float: left;
     margin-right: 20px;
-}*/
+}
 .sns-icons svg{
     fill: rgba(255, 255, 255, 0.5);
     transition: 0.3s ease;
@@ -356,12 +356,12 @@
 .info-right{
     float: right;
     /* 세로형 속성 */
-    position: relative;
+    /* position: relative; */
 }
 .education{
     margin-top: 3vh;
 }
-.sns-icons{
+/* .sns-icons{
     position: absolute;
     right: 0;
     top: 50%;
@@ -369,8 +369,49 @@
 }
 .sns-icons li{
     margin-top: 14px;
+} */
+.ability{
+    width: 100%;
+    margin-top: 5vh;
+    padding: 5vh 0;
+    background-color: #222;
+    /* background: url('./../img/ability-bg.jpg') no-repeat top center / cover;
+    background-attachment: fixed; */
 }
-/* ------------ */
+.ability-content{
+    overflow: hidden;
+}
+.skill{
+    float: left;
+    width: 60%;
+    overflow: hidden;
+}
+.skill > li{
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+    color: #fff;
+    border: solid 1px red;
+}
+.skill > li:last-child{
+    margin-right: 0;
+}
+.skill-tit{
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 800;
+}
+.go-ability{
+    float: right;
+    width: 30%;
+}
+/* ----------------------------------- */
+
+#project{
+    width: 100%;
+    margin-top: 20vh;
+    position: relative;
+}
 /* 백그라운드 애니메이션 */
 .back-txt-ani{
     width: 100%;
@@ -392,28 +433,35 @@
       background-position: -10000px 0;
     }
 }
-/* ------------ */
-.ability{
+.project-list{
+    margin-top: 5vh;
     position: relative;
-    z-index: 1;
-    margin-top: 5%;
+    z-index: 2;
 }
-.ability > ul{
-    width: 100%;
-    overflow: hidden;
+.project-list::after{
+    content: "";
+    display: block;
+    clear: both;
 }
-.ability > ul > li{
+.project-list > li{
     float: left;
     width: 32%;
+    height: 400px;
+    background-color: #222;
     margin-right: 2%;
-    background-color: #000;
-    height: 300px;
-    border-radius: 2%;
 }
-.ability > ul > li:last-child{
+.project-list > li:nth-child(1){
+    margin-top: 3vh;
+}
+.project-list > li:nth-child(2){
+    margin-top: 8vh;
+}
+.project-list > li:nth-child(3){
     margin-right: 0;
 }
-
-
-
+/* ----------------------------------- */
+#contact{
+    width: 100%;
+    margin-top: 10vh;
+}
   
