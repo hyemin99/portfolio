@@ -18,7 +18,6 @@ $(function(){
     $('.swiper-slide-active p').removeClass('on');
 
     var swiper = new Swiper('.swiper-container', {
-      initialSlide : 2,
       effect : 'fade',
       speed : 1000,
       loop: true,
@@ -26,15 +25,13 @@ $(function(){
         el: '.swiper-pagination',
         clickable: true,
       },
-      grabCursor: true,
-      reverseDirection: true,
       navigation: {
         nextEl: '.slide-button-next',
         prevEl: '.slide-button-prev',
       },
       autoplay: {
-              delay: 5000,
-              disableOnInteraction: false,
+        delay: 5000,
+        disableOnInteraction: false,
       },
       on: {
         slideChangeTransitionStart: function(){
@@ -51,7 +48,4 @@ $(function(){
         }
       }
     })
-    
-    $('.swiper-pagination .swiper-pagination-bullet:first-child').trigger('click');
-
 });
