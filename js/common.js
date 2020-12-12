@@ -10,9 +10,15 @@ $(function(){
       var mysc = $(this).scrollTop();
 
       if(mysc > 0){
-        $('header').css({'background-color' : 'rgba(0, 0, 0, 0.6)'});
+        $('header').css({
+          'background-color' : 'rgba(0, 0, 0, 0.6)',
+          'border-bottom' : 'solid 1px rgba(255, 255, 255, 0.1)'
+        });
       } else {
-          $('header').css({'background-color' : 'transparent'}); 
+          $('header').css({
+            'background-color' : 'transparent',
+            'border-bottom' : 'solid 1px transparent'
+          }); 
       }
     });
 

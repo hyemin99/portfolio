@@ -310,6 +310,9 @@
     line-height: 1.7;
     font-size: 16px !important;
 }
+.txt span{
+    margin-right: 10px;
+}
 /* **********about************************** */
 #about{
     position: relative;

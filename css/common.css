@@ -52,8 +52,9 @@ header{
 	left: 0;
 	background-color: transparent;
 	transition: background-color 0.5s ease;
+	border-bottom: solid 1px transparent;
 	z-index: 999;
-	backdrop-filter: blur(5px)
+	backdrop-filter: blur(4px)
 }
 header a{
 	color: #fff;
@@ -200,7 +201,8 @@ header a{
 
 footer{
 	width: 100%;
-	background-color: #222;
+	background-color: #000;
+	border-top: solid 1px rgba(255, 255, 255, 0.1);
 	height: 200px;
 }
 .footer-wrap{
