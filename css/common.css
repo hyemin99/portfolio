@@ -67,10 +67,12 @@ header a{
 .header-logo{
 	float: left;
 }
-.header-logo a{
+.header-logo a,
+.footer-logo{
 	font-weight: 800;
 	font-size: 18px;
 	letter-spacing: 5px;
+	color: #fff;
 }
 .header-nav{
 	float: right;
@@ -194,4 +196,13 @@ header a{
 	100%{
 		left: -200%;
 	}
+}
+
+footer{
+	width: 100%;
+	background-color: #222;
+	height: 200px;
+}
+.footer-wrap{
+	overflow: hidden;
 }

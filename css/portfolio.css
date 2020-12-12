@@ -306,10 +306,9 @@
 .txt{
     margin-top: 1vh;
     color: rgba(255, 255, 255, 0.8);
-    font-size: 100%;
     font-weight: 400;
     line-height: 1.7;
-    font-size: 16px;
+    font-size: 16px !important;
 }
 /* **********about************************** */
 #about{
@@ -322,8 +321,8 @@
     color: #fff;
     background-color: #000;
     overflow: hidden;
-    position: relative;
     z-index: 2;
+    position: relative;
 }
 .info-left,
 .info-right{
@@ -333,17 +332,7 @@
 .info-left{
     float: left;
 }
-/* 가로형 */
-.sns-icons {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-}
-.sns-icons li{
-    float: left;
-    margin-right: 20px;
-}
+/* 아이콘 공통 */
 .sns-icons svg{
     fill: rgba(255, 255, 255, 0.5);
     transition: 0.3s ease;
@@ -352,16 +341,24 @@
     fill: #fff;
     transition: 0.6s ease;
 } 
+/* 가로형 */
+/* .sns-icons {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+.sns-icons li{
+    float: left;
+    margin-right: 20px;
+} */
 /* 세로형 */
 .info-right{
     float: right;
     /* 세로형 속성 */
-    /* position: relative; */
+    position: relative;
 }
-.education{
-    margin-top: 3vh;
-}
-/* .sns-icons{
+.sns-icons{
     position: absolute;
     right: 0;
     top: 50%;
@@ -369,18 +366,53 @@
 }
 .sns-icons li{
     margin-top: 14px;
-} */
+}
+.education{
+    margin-top: 3vh;
+}
+/* -------------------------------------- */
 .ability{
     width: 100%;
-    margin-top: 10vh;
-    padding: 3vh 0;
+    margin-top: 6vh;
+    padding: 6vh 0;
     background-color: #151515;
     /* background: url('./../img/ability-bg.jpg') no-repeat top center / cover;
     background-attachment: fixed; */
+    color: #fff;
+}
+/* 상세페이지 버튼 */
+.ability-btn .go-page{
+    margin-top: 40px;
+}
+.ability-btn-mobile{
+    display: none;
 }
 
+.ability-content{
+    width: 100%;
+    overflow: hidden;
+}
+.ability-content li{
+    float: left;
+    width: 21.25%;
+    margin-right: 5%;
+}
+.ability-content li:last-child{
+    margin-right: 0;
+}
+.ability-tit{
+    margin-top: 30px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.ability-txt{
+    margin-top: 10px;
+    font-size: 14px;
+    color: #aaa;
+}
 /* ----------------------------------- */
-
 #project{
     width: 100%;
     margin-top: 20vh;
@@ -408,7 +440,7 @@
     }
 }
 .project-list{
-    margin-top: 5vh;
+    margin-top: 6vh;
     position: relative;
     z-index: 2;
 }
@@ -426,6 +458,8 @@
 }
 .project-list > li:nth-child(1){
     margin-top: 3vh;
+    background: url('./../img/project01.jpg') no-repeat center center
+    / cover;
 }
 .project-list > li:nth-child(2){
     margin-top: 8vh;
@@ -436,6 +470,6 @@
 /* ----------------------------------- */
 #contact{
     width: 100%;
-    margin-top: 10vh;
+    margin-top: 20vh;
+    height: 800px;
 }
-  
