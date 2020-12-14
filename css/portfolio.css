@@ -532,29 +532,26 @@
 }
 .contact-left{
     float: left;
-    width: 20%;
+    width: 25%;
 }
 .contact-right{
     float: right;
     width: 60%;
 }
-.contact-right > li:nth-child(2){
-    margin-top: 5vh;
+.contact-right > li{
+    margin-bottom: 5vh;
+}
+.contact-right > li:last-child{
+    margin-bottom: 0;
 }
 .contact-li{
     display: block;
     color: #fff;
     font-size: 3vw;
-    font-weight: 800;
+    font-weight: 700;
 }
 .open-kakao img{
     width: 100%;
-    border: solid 5px transparent;
-    transition: 0.4s ease;
-}
-.open-kakao:hover img{
-    border: solid 5px blue;
-    transition: 0.6s ease;
 }
 .contact-right .contact-li{
     position: relative;
@@ -563,7 +560,6 @@
 .contact-right .contact-li::before{   
     content: "";
     width: 0;
-    font-size: 3vw;
     font-weight: 800;
     display: block;
     position: absolute;
@@ -576,13 +572,16 @@
     transition: 0.4s ease;
     opacity: 0.5;
 }
-.contact-right .e-mail:hover::before{
-    width: 92%;
+.contact-right .contact-li:hover:before{
     transition: 0.6s ease;
     opacity: 1;
 }
+.contact-right .e-mail:hover::before{
+    width: 92%;
+}
 .contact-right .phone:hover::before{
     width: 54%;
-    transition: 0.6s ease;
-    opacity: 1;
+}
+.contact-right .instagram:hover::before{
+    width: 46%;
 }

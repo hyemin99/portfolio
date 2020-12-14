@@ -3,20 +3,40 @@
 	#wrap{
         border: solid 10px red;
 	}
+	.sidemenu{
+		width: 60%;
+		right: -60%;
+	}
+	
  }
  @media all and (max-width:1024px) { 
 	#wrap{
         border: solid 10px yellow;
+	}
+	.web-nav{
+		display: none;
+	}
+	.sidemenu{
+		width: 70%;
+		right: -70%;
 	}
  }
 @media all and (max-width:768px) { 
 	#wrap{
         border: solid 10px blue;
 	}
+	.sidemenu{
+		width: 90%;
+		right: -90%;
+	}
  }
 @media all and (max-width:480px) { 
 	#wrap{
         border: solid 10px green;
+	}
+	.sidemenu{
+		width: 90%;
+		right: -90%;
 	}
  }
  @media all and (max-width:320px) { 
