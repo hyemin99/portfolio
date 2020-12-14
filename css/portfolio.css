@@ -7,6 +7,7 @@
     width: 100%;
     overflow: hidden;
     position: relative;
+    z-index: 800;
     height: 100vh;
 }
 .swiper-container{
@@ -302,6 +303,7 @@
     font-size: 20px;
     color: blue;
     /* point */
+    margin-bottom: 1vh;
 }
 .txt{
     margin-top: 1vh;
@@ -379,8 +381,6 @@
     margin-top: 6vh;
     padding: 6vh 0;
     background-color: #151515;
-    /* background: url('./../img/ability-bg.jpg') no-repeat top center / cover;
-    background-attachment: fixed; */
     color: #fff;
 }
 /* 상세페이지 버튼 */
@@ -444,7 +444,6 @@
 }
 .project-list{
     margin-top: 6vh;
-    position: relative;
     z-index: 2;
 }
 .project-list::after{
@@ -455,14 +454,13 @@
 .project-list > li{
     float: left;
     width: 32%;
-    height: 400px;
     background-color: #222;
     margin-right: 2%;
+    position: relative;
+    overflow: hidden;
 }
 .project-list > li:nth-child(1){
     margin-top: 3vh;
-    background: url('./../img/project01.jpg') no-repeat center center
-    / cover;
 }
 .project-list > li:nth-child(2){
     margin-top: 8vh;
@@ -470,9 +468,121 @@
 .project-list > li:nth-child(3){
     margin-right: 0;
 }
+/* 프로젝트 호버 project hover box */
+.project-list img{
+    width: 100%;
+    vertical-align: bottom;
+}
+.hover-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.75);
+    transition: 0.3s ease;
+    opacity: 0;
+}
+.hover-box > div{
+    position: absolute;
+    width: 90%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+.hover-box span{
+    letter-spacing: 2px;
+}
+.hover-txt{
+    margin-top: 15px;
+    font-size: 24px;
+    font-weight: 800;
+}
+.hover-arr{
+    margin-top: 15px;
+    width: 40px;
+    fill: #fff;
+    transform: translateX(-20px);
+    transition: 0.3s ease;
+}
+.hover-box:hover{
+    opacity: 1;
+    transition: 0.6s ease;
+}
+.hover-box:hover .hover-arr{
+    transform: translateX(0);
+    transition: 0.6s ease;
+}
+
 /* ----------------------------------- */
 #contact{
-    width: 100%;
     margin-top: 20vh;
-    height: 800px;
+}
+#clock{
+    color: #fff;
+    margin-top: 20px;
+    font-weight: 800;
+    font-size: 20px;
+}
+.contact-container{
+    margin-top: 5vh;
+    overflow: hidden;
+}
+.contact-left{
+    float: left;
+    width: 20%;
+}
+.contact-right{
+    float: right;
+    width: 60%;
+}
+.contact-right > li:nth-child(2){
+    margin-top: 5vh;
+}
+.contact-li{
+    display: block;
+    color: #fff;
+    font-size: 3vw;
+    font-weight: 800;
+}
+.open-kakao img{
+    width: 100%;
+    border: solid 5px transparent;
+    transition: 0.4s ease;
+}
+.open-kakao:hover img{
+    border: solid 5px blue;
+    transition: 0.6s ease;
+}
+.contact-right .contact-li{
+    position: relative;
+    z-index: 1;
+}
+.contact-right .contact-li::before{   
+    content: "";
+    width: 0;
+    font-size: 3vw;
+    font-weight: 800;
+    display: block;
+    position: absolute;
+    height: 50%;
+    background-color: rgba(0, 0, 255, 0.5);
+    bottom: 0;
+    left: 0;
+    color: #000;
+    z-index: -1;
+    transition: 0.4s ease;
+    opacity: 0.5;
+}
+.contact-right .e-mail:hover::before{
+    width: 92%;
+    transition: 0.6s ease;
+    opacity: 1;
+}
+.contact-right .phone:hover::before{
+    width: 54%;
+    transition: 0.6s ease;
+    opacity: 1;
 }

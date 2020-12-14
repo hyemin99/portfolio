@@ -1,14 +1,29 @@
 $(function(){
     $('header').animate({top:"0"},1000);
-    $('.scroll-ani').animate({bottom:"0"},1000);
+    $('.scroll-ani').animate({bottom:"0"},600);
     $('.swiper-container').delay(600).animate({
       'left' : '0',
       'opacity' : '1'
     });
-    
+    $(function () {
+      var lastScrollTop = 0,
+          delta = 15;
+      $(window).scroll(function (event) {
+        var st = $(this).scrollTop();
+
+        if (Math.abs(lastScrollTop-st) <= delta) return;
+        if ((st > lastScrollTop) && (lastScrollTop > 0)) {
+          $(".scroll-ani").css({bottom:"0"});
+          $(".top-btn").css({bottom:"-10%"});
+        } else {
+          $(".scroll-ani").css({bottom:"-110px"});
+          $(".top-btn").css({bottom:"2%"});
+        }
+        lastScrollTop = st;
+      });
+    });
     $(window).on('scroll', function(){
       var mysc = $(this).scrollTop();
-
       if(mysc > 0){
         $('header').css({
           'background-color' : 'rgba(0, 0, 0, 0.6)',
@@ -22,6 +37,34 @@ $(function(){
       }
     });
 
+    $('.go-top').click(function(){
+      $('html, body').animate({scrollTop:0},400);
+      return false;
+    });
+
+    //clock 현재시간(시계)
+    var clockTarget = document.getElementById("clock");
+
+    function clock() {
+        var date = new Date();
+        var month = date.getMonth();
+        var clockDate = date.getDate();
+        var day = date.getDay();
+        var week = ['일', '월', '화', '수', '목', '금', '토'];
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+    
+        clockTarget .innerText = `${month+1}월 ${clockDate}일 ${week[day]}요일`+'\u00A0 \u00A0'+
+        `${hours < 10 ? `0${hours}`: hours}:${minutes < 10 ? `0${minutes }`: minutes }:${seconds < 10 ? `0${seconds }`: seconds }`;
+    }
+    
+    function init() {
+    clock();
+    setInterval(clock, 1000);
+    }
+    init();
+    
     AOS.init({
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
