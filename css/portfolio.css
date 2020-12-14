@@ -539,7 +539,7 @@
     width: 60%;
 }
 .contact-right > li{
-    margin-bottom: 5vh;
+    margin-bottom: 4vh;
 }
 .contact-right > li:last-child{
     margin-bottom: 0;
@@ -554,34 +554,27 @@
     width: 100%;
 }
 .contact-right .contact-li{
+    display: inline-table;
     position: relative;
-    z-index: 1;
+    overflow: hidden;
+    line-height: 1.1;
 }
-.contact-right .contact-li::before{   
+.contact-right .contact-li span{
+    position: relative;
+    z-index: 2;
+}
+.contact-right .contact-li::before{
     content: "";
-    width: 0;
-    font-weight: 800;
-    display: block;
     position: absolute;
-    height: 50%;
-    background-color: rgba(0, 0, 255, 0.5);
+    display: block;
     bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(0, 0, 255, 0.4);
+    transition: 0.3s ease-out;
+}
+.contact-right .contact-li:hover::before{
     left: 0;
-    color: #000;
-    z-index: -1;
-    transition: 0.4s ease;
-    opacity: 0.5;
-}
-.contact-right .contact-li:hover:before{
-    transition: 0.6s ease;
-    opacity: 1;
-}
-.contact-right .e-mail:hover::before{
-    width: 92%;
-}
-.contact-right .phone:hover::before{
-    width: 54%;
-}
-.contact-right .instagram:hover::before{
-    width: 46%;
+    transition: 0.6s ease-out;
 }

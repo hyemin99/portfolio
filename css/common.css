@@ -132,8 +132,8 @@ header a{
 #hamburger > div{
     width: 100%;
     height: 2px;
-	background: #999;
-	transition: background-color 0.5s ease;
+	background: rgba(255, 255, 255, 0.75);
+	transition: 0.5s ease;
 }
 #hamburger:hover > div{
 	background-color: #fff;
@@ -241,6 +241,7 @@ header a{
 }
 .sidemenu{
 	position: fixed;
+	height: 100vh;
 	min-width: 300px;
 	background: #000;
 	height: 100%;
@@ -248,22 +249,48 @@ header a{
 	top: 0;
 	right: -40%;
 }
+.side-content{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 300px;
+	padding-left: 10%;
+}
+.side-nav{
+	margin-bottom: 4vh;
+}
+.side-nav > span{
+	color: blue;
+	font-size: 16px;
+	margin-right: 2vh;
+	font-weight: 800;
+}
+.side-nav > a{
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 46px;
+	transition: 0.3s ease;
+	position: relative;
+}
+.side-nav > a:hover{
+	color: #fff;
+	transition: 0.6s ease;
+}
 
-/* page btn */
-/* .go-page{
-	display: block;
-	border: solid 1px rgba(255, 255, 255, 0.6);
-	color:  rgba(255, 255, 255, 0.6);
-	line-height: 30px;
-	text-align: center;
-	width: 200px;
+.side-nav > a::after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 3px;
+	background-color: rgba(0, 0, 255, 0.5);
 	transition: 0.3s ease;
 }
-.go-page:hover{
-	border: solid 1px #fff;
-	color: #fff;
-	transition: 0.5s ease;
-} */
+.side-nav > a:hover::after{
+	width: 100%;
+	transition: 0.6s ease;
+}
 /* 색 백그라운드 */
 .go-page{
 	display: block;

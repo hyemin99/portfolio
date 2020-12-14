@@ -1,11 +1,11 @@
 
 @media all and (max-width:1200px) { 
-	#wrap{
-        border: solid 10px red;
-	}
 	.sidemenu{
 		width: 60%;
 		right: -60%;
+	}
+	.width70{
+		width: 90%;
 	}
 	
  }
@@ -29,6 +29,7 @@
 		width: 90%;
 		right: -90%;
 	}
+	
  }
 @media all and (max-width:480px) { 
 	#wrap{

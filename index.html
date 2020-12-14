@@ -41,6 +41,12 @@
 				width: 100%;
 			}
 		}
+		.side-nav:nth-child(1) a{
+			color: #fff;
+		}
+		.side-nav:nth-child(1) a::after{
+			width: 100%;
+		}
 	</style>
 </head>
 <body>
@@ -53,7 +59,7 @@
 			<nav class="header-nav">
 				<li class="web-nav"><a href="./index.html">home</a></li>
 				<li class="web-nav"><a href="#">about</a></li>
-				<li class="web-nav"><a href="./project.html">project</a></li>
+				<li class="web-nav"><a href="#">project</a></li>
 				<li class="web-nav"><a href="#">contact</a></li>
 				<li class="nav-ico"></li>
 			</nav>
@@ -65,7 +71,17 @@
 		<div class="line03 no-ani"></div>
 	</div>
 	<div id="sidemenu-container">
-		<aside class="sidemenu"></aside>
+		<aside class="sidemenu">
+			<div class="side-content">
+				<ul class="uppercase">
+					<li class="side-nav"><span>01</span><a href="#">home</a></li>
+					<li class="side-nav"><span>01</span><a href="#">about</a></li>
+					<li class="side-nav"><span>01</span><a href="#">project</a></li>
+					<li class="side-nav"><span>01</span><a href="#">contact</a></li>
+				</ul>
+				
+			</div>
+		</aside>
 	</div>
 	<div class="content-wrap">
 		<div class="slide-content">
@@ -350,19 +366,19 @@
 					<li>
 						<p class="sub-tit-name">e-mail</p>
 						<a class="contact-li e-mail" href="mailto:hyemin.k8531@gmail.com" target="_blank">
-							hyemin.k8531@gmail.com
+							<span>hyemin.k8531@gmail.com</span>
 						</a>
 					</li>
 					<li>
 						<p class="sub-tit-name">phone</p>
 						<a class="contact-li phone" href="tel:010-3607-8531" target="_blank">
-							010.3607.8531
+							<span>010.3607.8531</span>
 						</a>
 					</li>
 					<li>
 						<p class="sub-tit-name">instagram</p>
 						<a class="contact-li instagram" href="https://www.instagram.com/darona_art/" target="_blank">
-							@darona_art
+							<span>@darona_art</span>
 						</a>
 					</li>
 				</ul>
