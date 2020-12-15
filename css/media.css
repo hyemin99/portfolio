@@ -23,6 +23,47 @@
 	.margin-top{
 		margin-top: 10vh;
 	}
+	/* 슬라이드 페이징 */
+	.swiper-pagination{
+		width: 100px !important;
+		height: 20px !important;
+		left: 74% !important;
+		top: 70% !important;
+		z-index: 999;
+	}
+	/* 슬라이드 이미지*/
+	.img-right{
+		width: 80%;
+	}
+	.img-right img{
+		width: 100%;
+		position: relative;
+		top: 40%;
+		transform: translateY(-50%);
+	}
+	.img-right.on{
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	/* 슬라이드 텍스트 */
+	.project-info{
+		position: absolute;
+		color: #fff;
+		top: 70%;
+		left: 0%;
+		transform: translate(0);
+		width: 100%;
+		text-align: center;
+	}
+	.page-btn .go-page{
+		margin: 30px auto;
+	}
+	.project-txt{
+		margin-top: 2%;
+	 }
+	/*.page-btn .go-page{
+		margin: 30px auto;
+	} */
 	/* 모바일 버튼 */
 	.ability-btn{
 		display: none;
