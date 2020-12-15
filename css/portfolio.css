@@ -78,7 +78,7 @@
     color: #fff;
     top: 50%;
     left: 50%;
-    transform: translateY(-50%);
+    transform: translate(0, -50%);
     width: 40%;
     z-index: 500;
 }
@@ -156,9 +156,6 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-}
-.vips-img{
-    padding-top: 5%;
 }
 .img-left.on{
     top: 0;
@@ -315,12 +312,14 @@
 .txt span{
     margin-right: 10px;
 }
+.margin-top{
+    margin-top: 20vh;
+}
 /* **********about************************** */
 #about{
     position: relative;
     width: 100%;
     overflow: hidden;
-    margin-top: 20vh;
 }
 .my-info{
     color: #fff;
@@ -390,6 +389,9 @@
 .ability-btn-mobile{
     display: none;
 }
+.ability-btn-mobile .go-page{
+    margin: 40px auto 0 auto;
+}
 
 .ability-content{
     width: 100%;
@@ -418,7 +420,6 @@
 /* ----------------------------------- */
 #project{
     width: 100%;
-    margin-top: 20vh;
     position: relative;
 }
 /* 백그라운드 애니메이션 */
@@ -517,9 +518,6 @@
 }
 
 /* ----------------------------------- */
-#contact{
-    margin-top: 20vh;
-}
 #clock{
     color: #fff;
     margin-top: 20px;

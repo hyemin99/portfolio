@@ -5,20 +5,66 @@
 		right: -60%;
 	}
 	.width70{
-		width: 90%;
+		width: 80%;
 	}
-	
  }
  @media all and (max-width:1024px) { 
-	#wrap{
-        border: solid 10px yellow;
-	}
 	.web-nav{
 		display: none;
+	}
+	.width80,
+	.width70{
+		width: 90%;
 	}
 	.sidemenu{
 		width: 70%;
 		right: -70%;
+	}
+	.margin-top{
+		margin-top: 10vh;
+	}
+	/* 모바일 버튼 */
+	.ability-btn{
+		display: none;
+	}
+	.ability-btn-mobile{
+		display: block;
+	}
+	.ability-wed{
+		display: none;
+	}
+	/* 어바웃 구조 */
+	.info-left,
+	.info-right{
+		width: 100%;
+	}
+	.info-left{
+		padding-right: 20%;
+	}
+	.info-right{
+		overflow: hidden;
+	}
+	.info-right> div{
+		float: left;
+		width: 50%;
+	}
+	.education{
+		margin-top: 0;
+	}
+	/* 어빌리티 */
+	.ability-content li{
+		width: 33.333%;
+		text-align: center;
+		margin-right: 0%;
+	}
+	/* 컨텍트 */
+	.contact-left{
+		float: left;
+		width: 30%;
+	}
+	.contact-right{
+		float: right;
+		width: 60%;
 	}
  }
 @media all and (max-width:768px) { 
@@ -29,7 +75,6 @@
 		width: 90%;
 		right: -90%;
 	}
-	
  }
 @media all and (max-width:480px) { 
 	#wrap{
