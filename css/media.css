@@ -24,7 +24,7 @@
 		right: -70%;
 	}
 	.margin-top{
-		margin-top: 10vh;
+		margin-top: 100px;
 	}
 	/* 슬라이드 페이징 */
 	.swiper-pagination{
@@ -261,6 +261,18 @@
 	.ability-content li{
 		width: 100%;
 		margin-bottom: 20px;
+		text-align: left;
+		overflow: hidden;
+	}
+	.ability-content img{
+		display: block;
+		float: left;
+		width: 3%;
+	}
+	.ability-txt-group{
+		width: 60%;
+		float: right;
+		margin-top: 20px;
 	}
  }
  @media all and (max-width:320px) { 
