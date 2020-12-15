@@ -236,8 +236,9 @@
 	}
  }
  @media all and (max-width:480px) { 
-	#wrap{
-        border: solid 10px green;
+	 
+	.page-btn .go-page{
+		margin: 15px auto;
 	}
  }
  @media all and (max-width:320px) { 
