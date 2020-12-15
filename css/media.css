@@ -236,13 +236,21 @@
 	}
  }
  @media all and (max-width:480px) { 
-	 
+	.img-right{
+		width: 52vh;
+		padding: 0 10%;
+	}
 	.page-btn .go-page{
 		margin: 15px auto;
 	}
- }
- @media all and (max-width:320px) { 
-	#wrap{
-        border: solid 10px palevioletred;
+	#wrap .slide-button-next,
+	#wrap .slide-button-prev {
+		display: none;
+	}
+	.ability-content li{
+		width: 100%;
+		margin-bottom: 20px;
 	}
  }
+ /* @media all and (max-width:320px) { 
+ } */
