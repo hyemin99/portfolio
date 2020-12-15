@@ -266,7 +266,7 @@ header a{
 }
 .side-nav > a{
 	color: rgba(255, 255, 255, 0.6);
-	font-size: 46px;
+	font-size: 30px;
 	transition: 0.3s ease;
 	position: relative;
 }
@@ -299,7 +299,7 @@ header a{
 	margin-top: 2vh;
 }
 .side-contact a{
-	font-size: 16px;
+	font-size: 14px;
 	color: rgba(255, 255, 255, 0.75);
 	transition: 0.3s ease;
 	line-height: 1.5;

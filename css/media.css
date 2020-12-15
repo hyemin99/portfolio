@@ -16,6 +16,9 @@
 	.width70{
 		width: 90%;
 	}
+	#hamburger{
+		right: 5%;
+	}
 	.sidemenu{
 		width: 70%;
 		right: -70%;
