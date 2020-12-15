@@ -247,6 +247,9 @@
 	}
  }
  @media all and (max-width:480px) { 
+	.margin-top{
+		margin-top: 50px;
+	}
 	.img-right{
 		width: 52vh;
 		padding: 0 5%;
