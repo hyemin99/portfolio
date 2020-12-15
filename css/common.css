@@ -274,7 +274,6 @@ header a{
 	color: #fff;
 	transition: 0.6s ease;
 }
-
 .side-nav > a::after{
 	content: "";
 	position: absolute;
@@ -289,6 +288,42 @@ header a{
 	width: 100%;
 	transition: 0.6s ease;
 }
+/* 밑 이름 및 인포 */
+.side-info{
+	margin-top: 10vh;
+	color: #fff;
+	font-size: 18px;
+	letter-spacing: 1px;
+}
+.side-contact{
+	margin-top: 2vh;
+}
+.side-contact a{
+	font-size: 16px;
+	color: rgba(255, 255, 255, 0.75);
+	transition: 0.3s ease;
+	line-height: 1.5;
+}
+.side-contact a:hover{
+	color: #fff;
+	transition: 0.6s ease;
+}
+.side-sns{
+	overflow: hidden;
+	margin-top: 4vh;
+}
+.side-sns li{
+	float: left;
+	margin-right: 20px;
+}
+.side-sns svg{
+    fill: rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+}
+.side-sns a:hover> svg{
+    fill: #fff;
+    transition: 0.6s ease;
+} 
 /* 색 백그라운드 */
 .go-page{
 	display: block;
