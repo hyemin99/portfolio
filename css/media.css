@@ -190,6 +190,9 @@
 	.project-txt{
 		display: none;
 	}
+	.page-btn .go-page{
+		margin: 15px auto;
+	}
 	/* 어바웃 구조 */
 	.info-left{
 		padding-right: 0;
@@ -234,14 +237,16 @@
 		font-size: 6vw;
 		font-weight: 700;
 	}
+	.swiper-pagination{
+		left: calc(50% - 50px) !important;
+		top: 62% !important;
+		z-index: 999;
+	}
  }
  @media all and (max-width:480px) { 
 	.img-right{
 		width: 52vh;
 		padding: 0 10%;
-	}
-	.page-btn .go-page{
-		margin: 15px auto;
 	}
 	#wrap .slide-button-next,
 	#wrap .slide-button-prev {
@@ -252,5 +257,11 @@
 		margin-bottom: 20px;
 	}
  }
- /* @media all and (max-width:320px) { 
- } */
+ @media all and (max-width:320px) { 
+	.swiper-pagination{
+		top: 60% !important;
+	}
+	.project-info{
+		bottom: 18%;
+	}
+ }
