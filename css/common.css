@@ -114,7 +114,6 @@ header a{
 /* 네브 아이콘 */
 .nav-ico{
 	width: 70px;
-	height: 70px;
 	z-index: 9999;
 }
 #hamburger{
@@ -126,6 +125,9 @@ header a{
 	right: 10%;
 	cursor: pointer;
 	z-index: 9999;
+}
+#hamburger.on{
+	top: 23px;
 }
 #hamburger > div{
     width: 100%;

@@ -1,11 +1,12 @@
 $(function(){
     $('header').animate({top:'0'},1000);
-    $('#hamburger').animate({top:'23px'},1000);
+    $('#hamburger').addClass('on',1000);
     $('.scroll-ani').animate({bottom:'0'},600);
     $('.swiper-container').delay(600).animate({
       'left' : '0',
       'opacity' : '1'
     });
+    
     $(function () {
       var lastScrollTop = 0,
           delta = 15;

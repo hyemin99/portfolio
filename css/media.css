@@ -247,6 +247,13 @@
 	}
  }
  @media all and (max-width:480px) { 
+	header a{
+		color: #fff;
+		line-height: 50px;
+	}
+	#hamburger.on{
+		top: 13px;
+	}
 	.margin-top{
 		margin-top: 50px;
 	}
