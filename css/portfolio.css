@@ -282,39 +282,6 @@
     bottom: 30%;
     animation-delay: 1.5s;
 }
-
-
-/* ********** main common *********** */
-.tit-name{
-    color: #fff;
-    font-weight: 800;
-}
-.tit-name > p{
-    margin-top: 10px;
-    font-size: 6.38vw;
-    text-transform: uppercase;
-}
-.sub-tit-name{
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 20px;
-    color: blue;
-    /* point */
-    margin-bottom: 1vh;
-}
-.txt{
-    margin-top: 1vh;
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 400;
-    line-height: 1.7;
-    font-size: 16px !important;
-}
-.txt span{
-    margin-right: 10px;
-}
-.margin-top{
-    margin-top: 200px;
-}
 /* **********about************************** */
 #about{
     position: relative;
