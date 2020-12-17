@@ -3,3 +3,40 @@
     overflow: hidden;
 }
 /* ------------------------------- */
+#profile,#skills{
+    margin-top: 100px;
+}
+#about-me::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.hyemin{
+    display: block;
+    width: 40%;
+    float: left;
+}
+.about-container{
+    float: right;
+    width: 50%;
+}
+.tit-name{
+    letter-spacing: 1.2vw;
+}
+
+/* 프로필 */
+#profile{
+    margin-top: 100px;
+    overflow: hidden;
+}
+#profile > li{
+    float: left;
+    width: 25%;
+}
+
+/* 스킬 */
+#skills{
+    width: 100%;
+    background-color: #151515;
+    padding: 80px 0;
+}

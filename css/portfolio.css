@@ -2,6 +2,10 @@
     width: 100%;
     overflow: hidden;
 }
+.section-number{
+    font-weight: 700;
+    font-size: 16px;
+}
 /* ------------------ */
 .slide-content{
     width: 100%;
