@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 	<meta charset="utf-8">
-	<title>project</title>
+	<title>contact</title>
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta charset="euc-kr">
@@ -121,11 +121,42 @@
                 <span>c</span>
                 <span>t</span>
                 <div class="txt sub-txt">
-                    생동감 있는 화면을 연출함과 동시에,<br>
-                    모든 사람이 사용하기 용이한 웹을 만들 수 있도록 노력합니다
+					궁금한 것이 있으시다면 편하게 연락주세요.<br>
+					어떠한 내용이던 좋습니다! 귀한 시간 내 주셔서 감사합니다 :)
                 </div>
             </div>
-        </div>
+		</div>
+		<div class="width70 margin-top">
+			<div id="clock"></div>
+			<div class="contact-container">
+				<div class="contact-left">
+					<p class="sub-tit-name">open kakao</p>
+					<a class="contact-li open-kakao" href="https://open.kakao.com/o/sDobPOIc" target="_blank">
+						<img src="./img/open-kakao.jpg" alt="오픈카카오 큐알코드입니다">
+					</a>
+				</div>
+				<ul class="contact-right">
+					<li>
+						<p class="sub-tit-name">e-mail</p>
+						<a class="contact-li e-mail" href="mailto:hyemin.k8531@gmail.com" target="_blank">
+							<span>hyemin.k8531@gmail.com</span>
+						</a>
+					</li>
+					<li>
+						<p class="sub-tit-name">phone</p>
+						<a class="contact-li phone" href="tel:010-3607-8531" target="_blank">
+							<span>010.3607.8531</span>
+						</a>
+					</li>
+					<li>
+						<p class="sub-tit-name">instagram</p>
+						<a class="contact-li instagram" href="https://www.instagram.com/darona_art/" target="_blank">
+							<span>@darona_art</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
     </div>
 	<div class="scroll-ani">
 		<div class="scroll-action"></div><div>SCROLL</div>
@@ -148,6 +179,31 @@
 	</footer>
 </div> 
 <script src="./js/common.js"></script>
-<script src="./js/main.js"></script>
+<script>
+	$(function(){
+		 //clock 현재시간(시계)
+		 var clockTarget = document.getElementById('clock');
+
+		function clock() {
+			var date = new Date();
+			var month = date.getMonth();
+			var clockDate = date.getDate();
+			var day = date.getDay();
+			var week = ['일', '월', '화', '수', '목', '금', '토'];
+			var hours = date.getHours();
+			var minutes = date.getMinutes();
+			var seconds = date.getSeconds();
+
+			clockTarget .innerText = `${month+1}월 ${clockDate}일 ${week[day]}요일`+'\u00A0 \u00A0'+
+			`${hours < 10 ? `0${hours}`: hours}:${minutes < 10 ? `0${minutes }`: minutes }:${seconds < 10 ? `0${seconds }`: seconds }`;
+		}
+
+	function init() {
+	clock();
+	setInterval(clock, 1000);
+	}
+	init();
+	});
+</script>
 </body>
 </html>
