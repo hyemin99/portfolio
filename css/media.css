@@ -172,6 +172,10 @@
 		font-size: 6vw;
 		font-weight: 700;
 	}
+	/* 서브 768 */
+	#sub-page-tit span {
+		font-size: 60px;
+	}
  }
  @media all and (max-width:624px) { 
 	.sidemenu{
@@ -291,5 +295,9 @@
 	}
 	.project-info{
 		bottom: 18%;
+	}
+	/* 서브 768 */
+	#sub-page-tit span {
+		font-size: 40px;
 	}
  }

@@ -183,7 +183,7 @@
 							<div class="skill-name">
 								<p>potoshop</p>
 								<div class="graph stack01">
-									<span style="width: 90%;">90%</span>
+									<span>98%</span>
 								</div>
 							</div>
 						</li>
@@ -191,22 +191,22 @@
 							<img class="skill-ico" src="./img/skills02.png" alt="스킬 아이콘 입니다"/>
 							<div class="skill-name">
 								<p>illustrator</p>
-								<div class="graph stack01">
-									<span style="width: 90%;">90%</span>
+								<div class="graph stack02">
+									<span>80%</span>
 								</div>
 							</div>
 						</li>
 					</ul>
 				</div>
 				<div class="development">
-					<span class="sub-tit-name">design</span><span class="txt">인터페이스(UI)와 사용자경험(UX)을 고려한 모바일 앱&웹 디자인을 합니다.</span>
+					<span class="sub-tit-name">Publishing</span><span class="txt">웹 표준/접근성에 대해 이해하고 그에 기반한 시멘틱 마크업을 합니다.</span>
 					<ul class="development-skill">
 						<li class="html">
 							<img class="skill-ico" src="./img/skills03.png" alt="스킬 아이콘 입니다"/>
 							<div class="skill-name">
 								<p>html</p>
-								<div class="graph stack01">
-									<span style="width: 90%;">90%</span>
+								<div class="graph stack03">
+									<span>92%</span>
 								</div>
 							</div>
 						</li>
@@ -214,8 +214,8 @@
 							<img class="skill-ico" src="./img/skills04.png" alt="스킬 아이콘 입니다"/>
 							<div class="skill-name">
 								<p>css</p>
-								<div class="graph stack01">
-									<span style="width: 90%;">90%</span>
+								<div class="graph stack04">
+									<span>90%</span>
 								</div>
 							</div>
 						</li>
@@ -223,8 +223,8 @@
 							<img class="skill-ico" src="./img/skills05.png" alt="스킬 아이콘 입니다"/>
 							<div class="skill-name">
 								<p>jquery</p>
-								<div class="graph stack01">
-									<span style="width: 90%;">90%</span>
+								<div class="graph stack05">
+									<span>75%</span>
 								</div>
 							</div>
 						</li>
@@ -232,8 +232,8 @@
 							<img class="skill-ico" src="./img/skills06.png" alt="스킬 아이콘 입니다"/>
 							<div class="skill-name">
 								<p>javascripts</p>
-								<div class="graph stack01">
-									<span style="width: 90%;">90%</span>
+								<div class="graph stack06">
+									<span>68%</span>
 								</div>
 							</div>
 						</li>
@@ -263,5 +263,16 @@
 	</footer>
 </div> 
 <script src="./js/common.js"></script>
+<script>
+	$(function(){
+		$(window).on('scroll', function() {
+		var scrollTop = window.innerHeight / 2;
+		var eleTop = $('#skills')[0].getBoundingClientRect().top;
+		if(eleTop < scrollTop) {
+			$('.graph span').addClass('on');
+		}
+		});
+	});	
+</script>
 </body>
 </html>

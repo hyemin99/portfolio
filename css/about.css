@@ -26,7 +26,6 @@
 
 /* 프로필 */
 #profile{
-    margin-top: 100px;
     overflow: hidden;
 }
 #profile > li{
@@ -84,29 +83,129 @@
     margin-top: 10px;
     background-color: #222;
     border-radius: 20px;
+    width: 100%;
 }
 .graph > span{
     display: block;   
+    width: 0;
+    color: transparent;
     padding: 0 10px;
     height: 20px;
     line-height: 20px;
     text-align: right;
     border-radius: 20px;
-    color: #fff;
     background-color: blue;
 }
-.graph.stack01 span{
-    animation: skill-ani01 2s 1;
+.graph.stack01 span.on{
+    animation: skill-ani01 2s 1 forwards;
+}
+.graph.stack02 span.on{
+    animation: skill-ani02 2s 1 forwards;
+}
+.graph.stack03 span.on{
+    animation: skill-ani03 2s 1 forwards;
+}
+.graph.stack04 span.on{
+    animation: skill-ani04 2s 1 forwards;
+}
+.graph.stack05 span.on{
+    animation: skill-ani05 2s 1 forwards;
+}
+.graph.stack06 span.on{
+    animation: skill-ani06 2s 1 forwards;
 }
 @keyframes skill-ani01{
-    0%{
-        width: 0;
-        color: transparent;
+    0%{ width: 0;color: transparent;} 
+    100%{ width: 98%; color: #fff;}
+}
+@keyframes skill-ani02{
+    0%{ width: 0;color: transparent;} 
+    100%{ width: 80%; color: #fff;}
+}
+@keyframes skill-ani03{
+    0%{ width: 0;color: transparent;} 
+    100%{ width: 92%; color: #fff;}
+}
+@keyframes skill-ani04{
+    0%{ width: 0;color: transparent;} 
+    100%{ width: 90%; color: #fff;}
+}
+@keyframes skill-ani05{
+    0%{ width: 0;color: transparent;} 
+    100%{ width: 75%; color: #fff;}
+}
+@keyframes skill-ani06{
+    0%{ width: 0;color: transparent;} 
+    100%{ width: 68%; color: #fff;}
+}
+
+/* ----------------------------------------------- */
+/* 미디어 쿼리 */
+@media all and (max-width:1200px) { 
+    #profile{
+        margin-top: 70px;
     }
-    40%{
-        color: #fff;
+    #profile > li{
+        width: 50%;
     }
-    100%{
-        width: 90%;
+    #profile > li:nth-child(n+3){
+        margin-top: 30px;
     }
+    #profile{
+        margin-top: 80px;
+    }
+    .design-skill > li,
+    .development-skill > li{
+        width: 48%;
+        margin-right: 4%;
+    }
+}
+@media all and (max-width:1024px) { 
+    #profile,#skills{
+        margin-top: 60px;
+    }
+    #skills{
+        padding: 60px 0;
+    }
+}
+@media all and (max-width:768px) {   
+    .hyemin{
+        width: 100%;
+    }
+    .about-container{
+        width: 100%;
+        margin-top: 40px;
+    }
+    .design-skill > li,
+    .development-skill > li{
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+@media all and (max-width:624px) { 
+    #profile > li{
+        width: 100%;
+        margin-top: 30px;
+    }
+    #skills .sub-tit-name{
+        display: block;
+    }
+    .design-skill,
+    .development-skill{
+        overflow: hidden;
+        margin-top: 10px;
+    }
+    .skill-ico{
+        display: block;
+        width: 20%;
+        float: left;
+    }
+    .skill-name{
+        width: 75%;
+        float: right;
+    }
+}
+@media all and (max-width:480px) { 
+}
+@media all and (max-width:320px) { 
 }
