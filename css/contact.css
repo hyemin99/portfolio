@@ -39,6 +39,9 @@
     width: 100%;
 }
 .contact-right .contact-li{
+    display: inline-flex;
+    flex: none;
+    width: auto;
     position: relative;
     overflow: hidden;
     line-height: 1.1;
