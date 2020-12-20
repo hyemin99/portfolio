@@ -82,7 +82,7 @@
     height: 20px;
     margin-top: 10px;
     background-color: #222;
-    border-radius: 20px;
+    border-radius: 10px;
     width: 100%;
 }
 .graph > span{
@@ -93,7 +93,7 @@
     height: 20px;
     line-height: 20px;
     text-align: right;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: blue;
 }
 .graph.stack01 span.on{
@@ -197,7 +197,7 @@
     }
     .skill-ico{
         display: block;
-        width: 20%;
+        width: 15%;
         float: left;
     }
     .skill-name{

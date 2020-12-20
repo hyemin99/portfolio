@@ -3,3 +3,48 @@
     overflow: hidden;
 }
 /* ------------------------------- */
+.project-list > li{
+    margin-top: 100px;
+}
+.project-list > li::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.project-img{
+    float: left;
+    display: block;
+    width: 40%;
+    position: relative;
+    z-index: 2;
+}
+.project-img::before{
+    content: "";
+    display: block;
+    width: 200%;
+    height: 10vw;
+    position: absolute;
+    bottom: 20%;
+    right: 2%;
+    background-color: blue;
+    z-index: -1;
+}
+.project-img img{
+    width: 100%;
+}
+.project-container{
+    float: right;
+    width: 50%;
+}
+/* 프로젝트 커먼 project common */
+.project-num{
+    font-size: 18px;
+    color: blue;
+    font-weight: 800;
+}
+.project-name{
+    font-size: 4vw;
+    font-weight: 800;
+    margin-top: 1vh;
+    text-transform: uppercase;
+}
