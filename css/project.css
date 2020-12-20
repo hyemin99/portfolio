@@ -151,7 +151,7 @@
     }
 }
 @media all and (max-width:320px) { 
-    #wrap{
-        border: solid 5px palegoldenrod;
+    .mobil320{
+        display: none;
     }
 }
