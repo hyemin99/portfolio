@@ -477,6 +477,7 @@
 .hover-arr{
     margin-top: 15px;
     width: 40px;
+    height: 40px;
     fill: #fff;
     transform: translateX(-20px);
     transition: 0.3s ease;
