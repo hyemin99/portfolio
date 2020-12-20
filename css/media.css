@@ -110,8 +110,7 @@
 		width: 90%;
 		right: -90%;
 	}
-	.scroll-ani,
-	.top-btn{
+	.scroll-ani{
 		display: none;
 	}
 	/* 슬라이드 텍스트 */

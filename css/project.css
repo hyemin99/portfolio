@@ -151,7 +151,4 @@
     }
 }
 @media all and (max-width:320px) { 
-    .mobil320{
-        display: none;
-    }
 }
