@@ -525,7 +525,6 @@
     width: 100%;
 }
 .contact-right .contact-li{
-    display: inline-table;
     position: relative;
     overflow: hidden;
     line-height: 1.1;
