@@ -20,5 +20,18 @@ $(function(){
 		if(eleTop > scrollTop) {
 			$('#bottom-nav').css({bottom:'-70px'});
 		}
-		});
+        });
+        
+     $(window).on('scroll', function(){
+        var mysc = $(this).scrollTop();
+        if(mysc > 0){
+            $('.main-img *').css({
+                'opacity' : '0.5'
+            });
+        } else {
+            $('.main-img *').css({
+                'opacity' : '1'
+            }); 
+        }
+        });
 });
