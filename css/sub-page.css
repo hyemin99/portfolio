@@ -24,6 +24,38 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+/* 텍스트 공통 */
+.main-tit{
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+.sub-tit{
+    font-size: 20px;
+    font-weight: 700;
+}
+.content-info{
+    overflow: hidden;
+    margin: 30px 0;
+}
+.content-info> li{
+    float: left;
+    margin-right: 20px ;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+.content-info span{
+    text-transform: uppercase;
+    margin-right: 10px;
+    font-weight: 700;
+    color: blue;
+}
+.main-info .txt{
+    text-align: justify;
+}
+
+/* 사이트 버튼 */
 .content-site{
     margin-top: 30px;
     overflow: hidden;
@@ -64,36 +96,6 @@
 	fill: #fff;
 	transform: translateX(14px);
 	transition: 0.5s ease;
-}
-/* 텍스트 공통 */
-.main-tit{
-    font-size: 50px;
-    letter-spacing: 2px;
-    font-weight: 800;
-    margin-bottom: 14px;
-}
-.sub-tit{
-    font-size: 20px;
-    font-weight: 700;
-}
-.content-info{
-    overflow: hidden;
-    margin: 30px 0;
-}
-.content-info> li{
-    float: left;
-    margin-right: 20px ;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 14px;
-}
-.content-info span{
-    text-transform: uppercase;
-    margin-right: 10px;
-    font-weight: 700;
-    color: blue;
-}
-.main-info .txt{
-    text-align: justify;
 }
 /* 스크롤 애니메이션 */
 .sroll-down{
@@ -141,4 +143,59 @@
         top: 30px;
         opacity: 0;
     }
+}
+/* 미디어 쿼리 */
+@media all and (max-width:1200px) { 
+    .content-width{
+        width: 80%;
+    }
+}
+@media all and (max-width:1024px) { 
+    .content-width{
+        width: 90%;
+    }
+}
+@media all and (max-width:768px) { 
+}
+@media all and (max-width:624px) { 
+    .main-tit{
+        font-size: 40px;
+    }
+    /* 인포 */
+    .content-info> li{
+        clear: both;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .content-info span{
+        margin-right: 20px;
+    }
+    /* 사이트 버튼 */
+    .content-site-wrap{
+        width: 100%;
+        position: relative;
+        height: 200px;
+    }
+    .content-site{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .content-site > li{
+        clear: both;
+        width: 300px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+@media all and (max-width:480px) { 
+    .main-tit{
+        font-size: 30px;
+    }
+    .margin-half{
+        margin-top: 35px;
+    }
+}
+@media all and (max-width:320px) { 
 }
