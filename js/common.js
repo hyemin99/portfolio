@@ -24,6 +24,7 @@ $(function(){
         lastScrollTop = st;
       });
     });
+    
     $(window).on('scroll', function(){
       var mysc = $(this).scrollTop();
       if(mysc > 0){
