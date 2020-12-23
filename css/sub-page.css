@@ -215,6 +215,7 @@
 }
 .bottom-left{
     float: left;
+    width: 30%;
 }
 .bottom-right{
     float: right;
