@@ -35,6 +35,13 @@
 .vips-main{
     background: url('./../vips-img/vips-main.jpg') no-repeat center / cover;
 }
+.asomey-main{
+    background: url('./../vips-img/vips-main.jpg') no-repeat center / cover;
+}
+.ssg-main{
+    background: url('./../vips-img/vips-main.jpg') no-repeat center / cover;
+}
+/* 메인 아이템 */
 .main-item{
     position: absolute;
     top: 50%;
@@ -197,12 +204,56 @@
 #bottom-nav{
     position: fixed;
     width: 100%;
-    height: 70px;
     background-color: #000;
     border: solid 1px rgba(255, 255, 255, 0.1);
     bottom: -70px;
     left: 0;
     transition: 0.5s ease;
+}
+#bottom-nav > .width80{
+    overflow: hidden;
+}
+.bottom-left{
+    float: left;
+}
+.bottom-right{
+    float: right;
+    overflow: hidden;
+}
+.bottom-right > li{
+    float: left;
+    margin: 0 10px;
+}
+.go-project-li{
+    width: 65px;
+    text-align: center;
+}
+.go-project-li a{
+    background-color: rgba(0, 0, 255, 0.5);
+}
+.go-project-li a:hover{
+    background-color: blue;
+}
+#bottom-nav a{
+    color: rgba(255, 255, 255, 0.8);
+    transition: 0.3s ease;
+    line-height: 65px;
+    font-size: 14px;
+    display: block;
+    text-transform: uppercase;
+}
+#bottom-nav svg{
+    fill: rgba(255, 255, 255, 0.8);
+    transition: 0.3s ease;
+    margin: 0 5px;
+}
+#bottom-nav a:hover{
+    color: #fff;
+    transition: 0.6s ease;
+}
+#bottom-nav a:hover >svg{
+    fill: #fff;
+    transition: 0.6s ease;
 }
 /* 미디어 쿼리 */
 @media all and (max-width:1200px) { 
@@ -258,6 +309,20 @@
     }
     .margin-half{
         margin-top: 35px;
+    }
+    /* 바탐 네브 높이 */
+    .bottom-right > li{
+        margin: 0 5px;
+    }
+    #bottom-nav a{
+        line-height: 50px;
+    }
+    #bottom-nav a > span{
+        display: none;
+    }
+    /* 목록 바탕 */
+    .go-project-li{
+        width: 50px;
     }
 }
 @media all and (max-width:320px) { 

@@ -25,13 +25,11 @@ $(function(){
      $(window).on('scroll', function(){
         var mysc = $(this).scrollTop();
         if(mysc > 0){
-            $('.main-img *').css({
-                'opacity' : '0.5'
-            });
+          $('.main-img *').css({'opacity' : '0.5'});
+          $('.project-arrow').css({'opacity' : '0'});
         } else {
-            $('.main-img *').css({
-                'opacity' : '1'
-            }); 
+          $('.main-img *').css({'opacity' : '1'});
+          $('.project-arrow').css({'opacity' : '1'});
         }
         });
 });
