@@ -84,7 +84,7 @@
     left: 50%;
     transform: translate(0, -50%);
     width: 40%;
-    z-index: 500;
+    z-index: 900;
 }
 .project-tit{
     font-size: 3vw;
