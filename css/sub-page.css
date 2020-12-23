@@ -222,7 +222,10 @@
 }
 .bottom-right > li{
     float: left;
-    margin: 0 10px;
+    margin-right: 10px;
+}
+.bottom-right > li:last-child{
+    margin-right: 0;
 }
 .go-project-li{
     width: 65px;
@@ -312,7 +315,7 @@
     }
     /* 바탐 네브 높이 */
     .bottom-right > li{
-        margin: 0 5px;
+        margin-right: 5px;
     }
     #bottom-nav a{
         line-height: 50px;
