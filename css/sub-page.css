@@ -215,7 +215,6 @@
 }
 .bottom-left{
     float: left;
-    width: 30%;
 }
 .bottom-right{
     float: right;
@@ -242,6 +241,7 @@
     color: rgba(255, 255, 255, 0.8);
     transition: 0.3s ease;
     line-height: 65px;
+    height: 65px;
     font-size: 14px;
     display: block;
     text-transform: uppercase;
@@ -320,6 +320,7 @@
     }
     #bottom-nav a{
         line-height: 50px;
+        height: 50px;
     }
     #bottom-nav a > span{
         display: none;
