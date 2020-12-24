@@ -215,6 +215,8 @@
 }
 .bottom-left{
     float: left;
+    width: 50%;
+    border: solid 1px red;
 }
 .bottom-right{
     float: right;
@@ -250,6 +252,7 @@
     fill: rgba(255, 255, 255, 0.8);
     transition: 0.3s ease;
     margin: 0 5px;
+    display: inline-block;
 }
 #bottom-nav a:hover{
     color: #fff;
@@ -303,6 +306,9 @@
         margin-right: 0;
         margin-bottom: 10px;
     }
+    #bottom-nav a > span{
+        display: none;
+    }
 }
 @media all and (max-width:480px) { 
     img.main-item{
@@ -321,9 +327,6 @@
     #bottom-nav a{
         line-height: 50px;
         height: 50px;
-    }
-    #bottom-nav a > span{
-        display: none;
     }
     /* 목록 바탕 */
     .go-project-li{
