@@ -22,6 +22,9 @@
     display: block;
     clear: both;
 }
+#about-me{
+    position: relative;
+}
 .hyemin{
     display: block;
     width: 40%;
@@ -161,9 +164,6 @@
 .think-left > li{
     margin-top: 50px;
 }
-.think-left > li:first-child{
-    margin-top: 0;
-}
 .think-left .txt{
     margin-top: 15px;
     color: rgba(255, 255, 255, 0.75);
@@ -191,14 +191,46 @@
     z-index: -1;
 }
 /* 이력서 */
-#resume{
+.resume{
     width: 100%;
-    background-color: #222;
-    padding: 2% 0;
-    text-align: center;
+    overflow: hidden;
 }
-footer{
-    margin-top: 0 !important;
+.resume> li{
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+}
+.resume> li:last-child{
+    margin-right: 0;
+}
+.resume-btn{
+    background-color: #222;
+    color:  rgba(255, 255, 255, 0.6);
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    transition: 0.3s ease;
+    font-size: 14px;
+}
+.resume-btn:hover{
+    color: #fff;
+    background-color: blue;
+	transition: 0.5s ease;
+}
+.resume-btn svg{
+	fill: #aaa;
+	transform: translateX(0);
+	margin-left: 10px;
+	transition: 0.3s ease;
+}
+.resume-btn:hover svg{
+    fill: #fff;
+	transition: 0.5s ease;
+}
+.resume-arr:hover svg{
+	fill: #fff;
+	transform: translateX(14px);
+	transition: 0.5s ease;
 }
 /* ----------
 .------------------------------------- */
@@ -221,6 +253,9 @@ footer{
         width: 48%;
         margin-right: 4%;
     }
+    .think-right{
+        margin-top: 100px;
+    }
 }
 @media all and (max-width:1024px) { 
     #profile,#skills{
@@ -236,8 +271,11 @@ footer{
         width: 200PX;
         height: 200PX;
     }
+    .hyemin{
+        width: 45%;
+    }
 }
-@media all and (max-width:768px) {   
+@media all and (max-width:840px) { 
     .hyemin{
         width: 100%;
     }
@@ -245,6 +283,11 @@ footer{
         width: 100%;
         margin-top: 40px;
     }
+    .think-right{
+        margin-top: 150px;
+    }
+}
+@media all and (max-width:768px) {  
     .design-skill > li,
     .development-skill > li{
         width: 100%;
@@ -304,6 +347,17 @@ footer{
     .think-right::before{
         width: 200px;
         height: 200px;
+    }
+    .resume> li{
+        float: left;
+        width: 300px;
+        margin-right: 0;
+        position: relative;
+        left: calc(50% - 150px);
+    }
+    .resume> li:last-child{
+        margin-right: 0;
+        margin-top: 10px;
     }
 }
 @media all and (max-width:320px) {
