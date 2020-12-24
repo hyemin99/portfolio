@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 /*font-family: 'Nanum Myeongjo', serif; 4,7,8*/
-html{scroll-behavior: smooth;}
 body{
 	font-family: 'Nanum Gothic', sans-serif;
 	font-weight: 400;
 	font-size: 0.75em;
 	background: black;
 	color: #fff;
+	min-height: 100vh;
+	/* mobile viewport bug fix */
+	min-height: -webkit-fill-available;
+}
+html {
+	height: -webkit-fill-available;
+	scroll-behavior: smooth;
 }
 /* 
 * { background-color: rgba(255,0,0,.2); }

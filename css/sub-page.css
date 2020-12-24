@@ -41,6 +41,11 @@
 .ssg-main{
     background: url('./../vips-img/vips-main.jpg') no-repeat center / cover;
 }
+/* 백그라운드 컬러 */
+.vips-bgcolor{
+    background-color: #2d2d2d;
+    width: 100%;
+}
 /* 메인 아이템 */
 .main-item{
     position: absolute;
@@ -216,7 +221,6 @@
 .bottom-left{
     float: left;
     width: 50%;
-    border: solid 1px red;
 }
 .bottom-right{
     float: right;
