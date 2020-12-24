@@ -261,6 +261,9 @@
 	.margin-top{
 		margin-top: 50px;
 	}
+    .margin-half{
+        margin-top: 35px;
+    }
 	.img-right{
 		width: 52vh;
 		padding: 0 5%;

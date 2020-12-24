@@ -35,15 +35,15 @@
 .vips-main{
     background: url('./../vips-img/vips-main.jpg') no-repeat center / cover;
 }
-.asomey-main{
-    background: url('./../vips-img/vips-main.jpg') no-repeat center / cover;
+.awesomey-main{
+    background: url('./../awesome-img/awesomey-main.jpg') no-repeat center / cover;
 }
 .ssg-main{
     background: url('./../vips-img/vips-main.jpg') no-repeat center / cover;
 }
 /* 백그라운드 컬러 */
 .vips-bgcolor{
-    background-color: #2d2d2d;
+    background-color: #444;
     width: 100%;
 }
 /* 메인 아이템 */
@@ -280,6 +280,9 @@
 @media all and (max-width:768px) { 
 }
 @media all and (max-width:624px) { 
+    .margin-web{
+        margin-top: 0;
+    }
     .main-tit{
         font-size: 40px;
     }
@@ -296,7 +299,7 @@
     .content-site-wrap{
         width: 100%;
         position: relative;
-        height: 200px;
+        height: 180px;
     }
     .content-site{
         position: absolute;
@@ -315,14 +318,14 @@
     }
 }
 @media all and (max-width:480px) { 
+    .margin-20{
+        margin-top: 10px;
+    }
     img.main-item{
-        width: 200px;
+        width: 150px;
     }
     .main-tit{
         font-size: 30px;
-    }
-    .margin-half{
-        margin-top: 35px;
     }
     /* 바탐 네브 높이 */
     .bottom-right > li{
