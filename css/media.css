@@ -182,6 +182,9 @@
 		width: 90%;
 		right: -90%;
 	}
+	footer{
+		margin-top: 50px;
+	}
 	.footer-wrap > div{
 		width: 100%;
 		text-align: center;
