@@ -2,6 +2,17 @@
     width: 100%;
     overflow: hidden;
 }
+.tit-name{
+    letter-spacing: 1.2vw;
+}
+.sub-tit-name > span{
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 700;
+}
+.txt{
+    line-height: 2;
+}
 /* ------------------------------- */
 #profile,#skills{
     margin-top: 100px;
@@ -20,10 +31,6 @@
     float: right;
     width: 50%;
 }
-.tit-name{
-    letter-spacing: 1.2vw;
-}
-
 /* 프로필 */
 #profile{
     overflow: hidden;
@@ -138,8 +145,63 @@
     0%{ width: 0;color: transparent;} 
     100%{ width: 68%; color: #fff;}
 }
-
-/* ----------------------------------------------- */
+/* 팅크 htink */
+.think-container{
+    width: 100%;
+}
+.think-container::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.think-left{
+    float: left;
+    width: 55%;
+}
+.think-left > li{
+    margin-top: 50px;
+}
+.think-left > li:first-child{
+    margin-top: 0;
+}
+.think-left .txt{
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.75);
+}
+.think-right{
+    float: right;
+    width: 30%;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+.think-right > img{
+    width: 80%;
+}
+.think-right::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 250px;
+    background-color: blue;
+    border-radius: 100%;
+    z-index: -1;
+}
+/* 이력서 */
+#resume{
+    width: 100%;
+    background-color: #222;
+    padding: 2% 0;
+    text-align: center;
+}
+footer{
+    margin-top: 0 !important;
+}
+/* ----------
+.------------------------------------- */
 /* 미디어 쿼리 */
 @media all and (max-width:1200px) { 
     #profile{
@@ -167,6 +229,13 @@
     #skills{
         padding: 60px 0;
     }
+    .think-right{
+        width: 35%;
+    }
+    .think-right::before{
+        width: 200PX;
+        height: 200PX;
+    }
 }
 @media all and (max-width:768px) {   
     .hyemin{
@@ -180,6 +249,24 @@
     .development-skill > li{
         width: 100%;
         margin-top: 30px;
+    }
+    .think-left{
+        float: left;
+        width: 100%;
+    }
+    .think-left > li{
+        margin-top: 50px;
+    }
+    .think-right{
+        margin-top: 50px;
+        width: 100%;
+    }
+    .think-right > img{
+        width: 50%;
+    }
+    .think-right::before{
+        width: 300PX;
+        height: 300PX;
     }
 }
 @media all and (max-width:624px) { 
@@ -204,8 +291,24 @@
         width: 75%;
         float: right;
     }
+    .think-right::before{
+        right: 10%;
+        width: 250PX;
+        height: 250PX;
+    }
 }
 @media all and (max-width:480px) { 
+    .think-left > li{
+        margin-top: 30px;
+    }
+    .think-right::before{
+        width: 200px;
+        height: 200px;
+    }
 }
-@media all and (max-width:320px) { 
+@media all and (max-width:320px) {
+    .think-right::before{
+        width: 150px;
+        height: 150px;
+    }
 }

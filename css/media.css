@@ -182,6 +182,12 @@
 		width: 90%;
 		right: -90%;
 	}
+	.margin-top{
+		margin-top: 50px;
+	}
+    .margin-half{
+        margin-top: 35px;
+    }
 	footer{
 		margin-top: 50px;
 	}
@@ -257,16 +263,16 @@
 	header a{
 		color: #fff;
 		line-height: 50px;
-	}
+	} 
+    .margin-40{
+        margin-top: 20px;
+    }
+    .margin-20{
+        margin-top: 10px;
+    }
 	#hamburger.on{
 		top: 13px;
 	}
-	.margin-top{
-		margin-top: 50px;
-	}
-    .margin-half{
-        margin-top: 35px;
-    }
 	.img-right{
 		width: 52vh;
 		padding: 0 5%;

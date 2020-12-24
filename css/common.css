@@ -50,7 +50,7 @@ svg{
     font-weight: 800;
     margin-top: 10px;
     font-size: 6.38vw;
-    text-transform: uppercase;
+	text-transform: uppercase;
 }
 .sub-tit-name{
     text-transform: uppercase;
@@ -60,6 +60,7 @@ svg{
     /* point */
 	margin-bottom: 1vh;
 	margin-right: 20px;
+	line-height: 1.5;
 }
 .txt{
     margin-top: 1vh;
@@ -70,6 +71,10 @@ svg{
 }
 .txt span{
     margin-right: 10px;
+}
+.sub-tit{
+    font-size: 20px;
+    font-weight: 700;
 }
 .sub-txt{
 	margin-top: 2vh;
@@ -93,6 +98,9 @@ svg{
 }
 .margin-half{
 	margin-top: 70px;
+}
+.margin-40{
+	margin-top: 40px;
 }
 .margin-20{
 	margin-top: 20px;

@@ -98,10 +98,6 @@
     font-weight: 800;
     margin-bottom: 14px;
 }
-.sub-tit{
-    font-size: 20px;
-    font-weight: 700;
-}
 .content-info{
     overflow: hidden;
     margin: 30px 0;
@@ -324,9 +320,6 @@
     }
 }
 @media all and (max-width:480px) { 
-    .margin-20{
-        margin-top: 10px;
-    }
     img.main-item{
         width: 150px;
     }
