@@ -2,20 +2,16 @@
 <html lang="ko">
 <head>
 	<meta charset="utf-8">
-	<title>project</title>
-	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0" />
+	<title>프로젝트 | 김혜민 포트폴리오</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta charset="euc-kr">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
-	<meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1" />
-
 
 	<link rel="stylesheet" type="text/css" href="./css/reset.css">
 	<link rel="stylesheet" type="text/css" href="./css/common.css">
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="stylesheet" type="text/css" href="./css/project.css">
 	<link rel="stylesheet" type="text/css" href="./css/media.css">
+	<link rel="stylesheet" type="text/css" href="./css/a11y.css">
 
 	<script src="./js/jquery-3.5.1.min.js"></script>
 	<script src="./lib/side-menu/jquery-ui.min.js"></script>
@@ -48,37 +44,42 @@
 	</style>
 </head>
 <body>
+<a class="skip-link" href="#main">본문 바로가기</a>
 <div id="wrap">
 	<header>
 		<div class="header-wrap uppercase width80">
 			<div class="header-logo">
-				<h1><a href="./index.html">hyemin</a></h1>
+				<a href="./index.html" aria-label="hyemin 홈으로 이동">hyemin</a>
 			</div>
-			<nav class="header-nav">
-				<li class="web-nav"><a href="./index.html">home</a></li>
-				<li class="web-nav"><a href="./about.html">about</a></li>
-				<li class="web-nav"><a href="./project.html">project</a></li>
-				<li class="web-nav"><a href="./contact.html">contact</a></li>
-				<li class="nav-ico"></li>
+			<nav aria-label="주 메뉴">
+				<ul class="header-nav">
+					<li class="web-nav"><a href="./index.html">home</a></li>
+					<li class="web-nav"><a href="./about.html">about</a></li>
+					<li class="web-nav"><a href="./project.html" aria-current="page">project</a></li>
+					<li class="web-nav"><a href="./contact.html">contact</a></li>
+					<li class="nav-ico" aria-hidden="true"></li>
+				</ul>
 			</nav>
 		</div>
 	</header>
-	<div id="hamburger">
+	<div id="hamburger" role="button" tabindex="0" aria-label="전체 메뉴 열기" aria-expanded="false" aria-controls="sidemenu-container">
 		<div class="line01 no-ani"></div>
 		<div class="line02 no-ani"></div>
 		<div class="line03 no-ani"></div>
 	</div>
 	<div id="sidemenu-container"></div>
-	<div class="content-wrap">
+	<main class="content-wrap" id="main" tabindex="-1">
         <div id="sub-page-tit" class="width70">
             <div>
-                <span>p</span>
-                <span>r</span>
-                <span>o</span>
-                <span>j</span>
-                <span>e</span>
-                <span>c</span>
-                <span>t</span>
+                <h1 aria-label="project">
+                    <span aria-hidden="true">p</span>
+                    <span aria-hidden="true">r</span>
+                    <span aria-hidden="true">o</span>
+                    <span aria-hidden="true">j</span>
+                    <span aria-hidden="true">e</span>
+                    <span aria-hidden="true">c</span>
+                    <span aria-hidden="true">t</span>
+                </h1>
                 <div class="txt sub-txt">
 					감성과 센스를 담아낸 프로젝트 입니다.
 					아직 부족한 작업들을 봐주셔서 감사합니다!
@@ -87,10 +88,10 @@
 		</div>
 		<ul class="content-list width70">
 			<li class="vips-renewal">
-				<a href="./vipsrenewal.html" class="content-img"><img data-aos="fade-right" src="./img/slide-items01.png"></a>
+				<a href="./vipsrenewal.html" class="content-img"><img data-aos="fade-right" src="./img/slide-items01.png" alt="빕스 리뉴얼 프로젝트 보기"></a>
 				<div class="content-container">
 					<p class="content-num">01</p>
-					<p class="content-name">vips renewal</p>
+					<h2 class="content-name">vips renewal</h2>
 					<p class="txt">
 						브랜드 및 시장 조사후 홈페이지 리뉴얼을 진행하였습니다.<br class="mobile-br"> 
 						메인 뿐만이 아닌 다양한 페이지를 리디자인 하여 빕스만의 개성을 살렸습니다.
@@ -101,18 +102,18 @@
 						<li><span>type</span>반응형 웹(메인)</li>
 					</ul>
 					<span class="content-go-btn">
-						<a class="go-page" href="./vipsrenewal.html">GO PAGE 
-							<svg viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/>
+						<a class="go-page" href="./vipsrenewal.html" aria-label="GO PAGE: 빕스 리뉴얼 프로젝트 보기">GO PAGE 
+							<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="none" d="M0 0h24v24H0z"/>
 							<path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
 						</a>
 					</span>
 				</div>
 			</li>
 			<li class="awesomey">
-				<a href="./awesomey.html" class="content-img"><img data-aos="fade-left" src="./img/slide-items02.png"></a>
+				<a href="./awesomey.html" class="content-img"><img data-aos="fade-left" src="./img/slide-items02.png" alt="어썸와이코리아 쇼핑몰 디자인 보기"></a>
 				<div class="content-container">
 					<p class="content-num">02</p>
-					<p class="content-name">mall design</p>
+					<h2 class="content-name">mall design</h2>
 					<p class="txt">
 						로고 · 슬라이드 및 브랜드 페이지를 직접 디자인 하고,<br class="mobile-br"> 
 						카페 24및 ftp를 사용하여 쇼핑몰 웹, 앱을 수정하였습니다.
@@ -123,18 +124,18 @@
 						<li><span>type</span>웹 / 모바일</li>
 					</ul>
 					<span class="content-go-btn">
-						<a class="go-page" href="./awesomey.html">GO PAGE 
-							<svg viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/>
+						<a class="go-page" href="./awesomey.html" aria-label="GO PAGE: 어썸와이코리아 쇼핑몰 디자인 보기">GO PAGE 
+							<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="none" d="M0 0h24v24H0z"/>
 							<path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
 						</a>
 					</span>
 				</div>
 			</li>
 			<li class="ssg-clone">
-				<a href="./ssg.html" class="content-img"><img data-aos="fade-right" src="./img/slide-items03.png"></a>
+				<a href="./ssg.html" class="content-img"><img data-aos="fade-right" src="./img/slide-items03.png" alt="신세계 클론 코딩 보기"></a>
 				<div class="content-container">
 					<p class="content-num">03</p>
-					<p class="content-name">ssg clone</p>
+					<h2 class="content-name">ssg clone</h2>
 					<p class="txt">
 						신세계 백화점 홈페이지를 클론코딩 하였습니다.<br>
 						슬라이드 및 애니메이션은 최대한 같게 구현하되,<br class="mobile-br"> 
@@ -146,28 +147,28 @@
 						<li><span>type</span>pc 웹(1920px 최적화)</li>
 					</ul>
 					<span class="content-go-btn">
-						<a class="go-page" href="./ssg.html">GO PAGE 
-							<svg viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/>
+						<a class="go-page" href="./ssg.html" aria-label="GO PAGE: 신세계 클론 코딩 보기">GO PAGE 
+							<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="none" d="M0 0h24v24H0z"/>
 							<path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
 						</a>
 					</span>
 				</div>
 			</li>
 		</ul>
-    </div>
-	<div class="scroll-ani">
+    </main>
+	<div class="scroll-ani" aria-hidden="true">
 		<div class="scroll-action"></div><div>SCROLL</div>
 	</div>
 	<div class="top-btn">
-		<span class="go-top">
-			<svg viewBox="0 0 24 24" width="48" height="48"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm1 10h3l-4-4-4 4h3v4h2v-4z"/></svg>
+		<span class="go-top" role="button" tabindex="0" aria-label="맨 위로 이동">
+			<svg viewBox="0 0 24 24" width="48" height="48" aria-hidden="true" focusable="false"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm1 10h3l-4-4-4 4h3v4h2v-4z"/></svg>
 		</span>
 	</div>
 	<footer>
 		<div class="footer-wrap width80">
 			<div class="footer-left">
-				<a href="tel:010-3607-8531"  target="_blank">010.3607.8531</a>
-				<a href="mailto:hyemin.k8531@gmail.com"  target="_blank">hyemin.k8531@gmail.com</a>
+				<a href="tel:010-3607-8531">010.3607.8531</a>
+				<a href="mailto:hyemin.k8531@gmail.com">hyemin.k8531@gmail.com</a>
 			</div>
 			<div class="footer-right">
 				copyright ⓒ HYEMIN all rights reserved.
@@ -177,5 +178,6 @@
 </div> 
 <script src="./js/sidemenu.js"></script>
 <script src="./js/common.js"></script>
+<script src="./js/a11y.js"></script>
 </body>
 </html>

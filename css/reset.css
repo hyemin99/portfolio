@@ -22,7 +22,7 @@ body {
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, main, menu, nav, section {
 	display: block;
 }
 a {color:#000;text-decoration: none;}
@@ -50,10 +50,8 @@ table {
 * {
 	box-sizing: border-box;
 }
-*:focus {
-	box-sizing: border-box;
-	outline:none;
-}
+/* [접근성] 키보드 포커스 표시를 지우던 *:focus { outline:none } 규칙 삭제
+   포커스 스타일은 a11y.css 의 :focus-visible 에서 정의합니다. */
 
 button {
 	cursor: pointer;

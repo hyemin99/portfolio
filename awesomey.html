@@ -2,20 +2,16 @@
 <html lang="ko">
 <head>
 	<meta charset="utf-8">
-	<title>awesome y korea</title>
-	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0" />
+	<title>어썸와이코리아 쇼핑몰 디자인 | 김혜민 포트폴리오</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta charset="euc-kr">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
-	<meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1" />
-
 
 	<link rel="stylesheet" type="text/css" href="./css/reset.css">
 	<link rel="stylesheet" type="text/css" href="./css/common.css">
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="stylesheet" type="text/css" href="./css/sub-page.css">
 	<link rel="stylesheet" type="text/css" href="./css/media.css">
+	<link rel="stylesheet" type="text/css" href="./css/a11y.css">
 
 	<script src="./js/jquery-3.5.1.min.js"></script>
 	<script src="./lib/side-menu/jquery-ui.min.js"></script>
@@ -48,38 +44,41 @@
 	</style>
 </head>
 <body>
+<a class="skip-link" href="#main">본문 바로가기</a>
 <div id="wrap">
 	<header>
 		<div class="header-wrap uppercase width80">
 			<div class="header-logo">
-				<h1><a href="./index.html">hyemin</a></h1>
+				<a href="./index.html" aria-label="hyemin 홈으로 이동">hyemin</a>
 			</div>
-			<nav class="header-nav">
-				<li class="web-nav"><a href="./index.html">home</a></li>
-				<li class="web-nav"><a href="./about.html">about</a></li>
-				<li class="web-nav"><a href="./project.html">project</a></li>
-				<li class="web-nav"><a href="./contact.html">contact</a></li>
-				<li class="nav-ico"></li>
+			<nav aria-label="주 메뉴">
+				<ul class="header-nav">
+					<li class="web-nav"><a href="./index.html">home</a></li>
+					<li class="web-nav"><a href="./about.html">about</a></li>
+					<li class="web-nav"><a href="./project.html" aria-current="true">project</a></li>
+					<li class="web-nav"><a href="./contact.html">contact</a></li>
+					<li class="nav-ico" aria-hidden="true"></li>
+				</ul>
 			</nav>
 		</div>
 	</header>
-	<div id="hamburger">
+	<div id="hamburger" role="button" tabindex="0" aria-label="전체 메뉴 열기" aria-expanded="false" aria-controls="sidemenu-container">
 		<div class="line01 no-ani"></div>
 		<div class="line02 no-ani"></div>
 		<div class="line03 no-ani"></div>
 	</div>
 	<div id="sidemenu-container"></div>
-	<div class="content-wrap">
+	<main class="content-wrap" id="main" tabindex="-1">
 		<div class="main-section">
 			<div class="bg-wrap">
 				<div class="main-img awesomey-main">
-					<img class="main-item" src="./awesome-img/logo.png" alt="어썸 로고입니다">
+					<img class="main-item" src="./awesome-img/logo.png" alt="어썸와이코리아 로고">
 					<div class="project-arrow">
 						<div class="prev-project">
-							<a href="./vipsrenewal.html">
+							<a href="./vipsrenewal.html" aria-label="prev, 이전 프로젝트 빕스 리뉴얼">
 								prev
-								<svg version="1.1" id="Layer_1" x="0px" y="0px"
-								 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+								<svg version="1.1" x="0px" y="0px"
+								 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" aria-hidden="true" focusable="false">
 									<path d="M501.333,245.333H36.417l141.792-141.792c4.167-4.167,4.167-10.917,0-15.083c-4.167-4.167-10.917-4.167-15.083,0l-160,160
 										c-4.167,4.167-4.167,10.917,0,15.083l160,160c2.083,2.083,4.813,3.125,7.542,3.125c2.729,0,5.458-1.042,7.542-3.125
 										c4.167-4.167,4.167-10.917,0-15.083L36.417,266.667h464.917c5.896,0,10.667-4.771,10.667-10.667S507.229,245.333,501.333,245.333z
@@ -88,10 +87,10 @@
 							</a>
 						</div>
 						<div class="next-project">
-							<a href="./ssg.html">
+							<a href="./ssg.html" aria-label="next, 다음 프로젝트 신세계 클론 코딩">
 								next
-								<svg version="1.1" id="Layer_1" x="0px" y="0px"
-								viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+								<svg version="1.1" x="0px" y="0px"
+								viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" aria-hidden="true" focusable="false">
 									<path d="M508.875,248.458l-160-160c-4.167-4.167-10.917-4.167-15.083,0c-4.167,4.167-4.167,10.917,0,15.083l141.792,141.792
 										H10.667C4.771,245.333,0,250.104,0,256s4.771,10.667,10.667,10.667h464.917L333.792,408.458c-4.167,4.167-4.167,10.917,0,15.083
 										c2.083,2.083,4.813,3.125,7.542,3.125c2.729,0,5.458-1.042,7.542-3.125l160-160C513.042,259.375,513.042,252.625,508.875,248.458z
@@ -100,7 +99,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="sroll-down">
+					<div class="sroll-down" aria-hidden="true">
 						<div class="main-scroll">
 							<span>Scroll</span>
 							<div class="scroll-dot"></div>
@@ -110,7 +109,7 @@
 			</div>
 		</div>
 		<div class="main-info content-width margin-top">
-			<p class="main-tit">Mall Design</p>
+			<h1 class="main-tit">Mall Design</h1>
 			<p class="sub-tit">어썸와이코리아 웹 디자인</p>
 			<ul class="content-info">
 				<li><span>role</span>로고 디자인 및 웹 수정</li>
@@ -125,17 +124,18 @@
 			<div class="content-site-wrap">
 				<ul class="content-site">
 					<li>
-						<a href="https://awesomeykorea.com/?is_pcver=T" target="_blank" class="site-btn site-arr">
+						<a href="https://awesomeykorea.com/?is_pcver=T" target="_blank" rel="noopener noreferrer" class="site-btn site-arr" aria-label="웹 사이트 가기 (새 창)">
 						웹 사이트 가기
-						<svg viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/>
+						<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="none" d="M0 0h24v24H0z"/>
 							<path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/>
 						</svg>
 						</a>
 					</li>
 					<li>
-						<a href="#" onclick="window.open('https://m.awesomeykorea.com/','name','resizable=no width=480 height=1080');return false" target="_blank" class="site-btn site-arr">
+						<!-- 모바일 미리보기 팝업 크기를 유지하되, 실제 주소를 href 에 둬서 키보드·스크린리더·우클릭에서도 동작 -->
+						<a href="https://m.awesomeykorea.com/" onclick="window.open('https://m.awesomeykorea.com/','name','resizable=no width=480 height=1080');return false" target="_blank" rel="noopener noreferrer" class="site-btn site-arr" aria-label="모바일 사이트 가기 (새 창)">
 						모바일 사이트 가기
-						<svg viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/>
+						<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="none" d="M0 0h24v24H0z"/>
 							<path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/>
 						</svg>
 						</a>
@@ -144,9 +144,9 @@
 			</div>
 		</div>
 		<div id="project-section" class="margin-web">
-			<img src="./awesome-img/awesome01.png" alt="어썸 이미지 입니다">
+			<img src="./awesome-img/awesome01.png" alt="어썸와이코리아 쇼핑몰 메인 화면">
 			<div class="content-width margin-half" data-aos="fade-up">
-				<p class="sub-tit">쇼핑몰, 디자인이 문제로다</p>
+				<h2 class="sub-tit">쇼핑몰, 디자인이 문제로다</h2>
 				<p class="txt">
 					'어썸 와이 코리아'는 미용제품 유통 업체로서 이미 지역에서 탄탄하게 자리 잡은 소·도매 거래처입니다. 
 					클라이언트께서 직접 쇼핑몰을 개설 하신 후 저에게 디자인을 맡겨주셨습니다. 거래처(미용 사업자)뿐만 아니라 개인 사용자의 유입도 원하셨기 때문에 
@@ -154,23 +154,23 @@
 				</p>
 			</div>
 			<div class="width70 margin-half" data-aos="fade-up">
-				<img src="./awesome-img/awesome02.jpg" alt="어썸 메인 슬라이드 입니다">
-				<img class="margin-20" src="./awesome-img/awesome03.jpg" alt="어썸 메인 슬라이드 입니다">
-				<img class="margin-20" src="./awesome-img/awesome04.jpg" alt="어썸 메인 슬라이드 입니다">
+				<img src="./awesome-img/awesome02.jpg" alt="어썸와이코리아 메인 슬라이드 디자인 1">
+				<img class="margin-20" src="./awesome-img/awesome03.jpg" alt="어썸와이코리아 메인 슬라이드 디자인 2">
+				<img class="margin-20" src="./awesome-img/awesome04.jpg" alt="어썸와이코리아 메인 슬라이드 디자인 3">
 			</div>
 			<div class="content-width margin-top" data-aos="fade-up">
-				<p class="sub-tit">특명 브랜드 디자인!</p>
+				<h2 class="sub-tit">특명 브랜드 디자인!</h2>
 				<p class="txt">
 					기존 도매용 로고를 표현하고자 하는 이미지에 맞게 다시 리디자인을 하였습니다. 스크롤시 헤더가 작아지는 웹 특성 상 두개를 제작하고 적용하였습니다.
 					브랜드 페이지는 추구하고자 하는 목표와 이념을 글로 풀어내고 사진의 상업적 이용 가능 여부를 확인 한 후 사용 하였습니다.
 				</p>
 			</div>
 			<div class="width70 margin-half" data-aos="fade-up">
-				<img src="./awesome-img/awesome06.jpg" alt="어썸 메인 슬라이드 입니다">
-				<img class="margin-20" src="./awesome-img/awesome05.jpg" alt="어썸 메인 슬라이드 입니다">
+				<img src="./awesome-img/awesome06.jpg" alt="어썸와이코리아 브랜드 페이지 디자인 1">
+				<img class="margin-20" src="./awesome-img/awesome05.jpg" alt="어썸와이코리아 브랜드 페이지 디자인 2">
 			</div>
 			<div class="content-width margin-top" data-aos="fade-up">
-				<p class="sub-tit">프로젝트 후기</p>
+				<h2 class="sub-tit">프로젝트 후기</h2>
 				<p class="txt">
 					실제 웹사이트 및 쇼핑몰이 어떻게 만들어 지는지 알 수 있었습니다.
 					쇼핑몰의 디자인을 수정하고 코드를 찾아보며 유지보수와 인클루드(php 등)에 관심이 많이 생겼습니다. 
@@ -180,47 +180,47 @@
 			</div>
 			<div class="width70 margin-half">
 				<p class="comment">#효과적 로고 자랑 #목업</p>
-				<img class="margin-20" src="./awesome-img/logo01-mockup.jpg" alt="흔한 작업 과정"/>
-				<img class="margin-20" src="./awesome-img/logo02-mockup.jpg" alt="흔한 작업 과정"/>
+				<img class="margin-20" src="./awesome-img/logo01-mockup.jpg" alt="어썸와이코리아 로고 목업 1"/>
+				<img class="margin-20" src="./awesome-img/logo02-mockup.jpg" alt="어썸와이코리아 로고 목업 2"/>
 			</div>
 		</div>
-    </div>
-	<div class="scroll-ani">
+    </main>
+	<div class="scroll-ani" aria-hidden="true">
 		<div class="scroll-action"></div><div>SCROLL</div>
 	</div>
-	<div id="bottom-nav">
+	<nav id="bottom-nav" aria-label="프로젝트 이동">
         <div class="width80">
 			<div class="bottom-left">
-				<a href="https://awesomeykorea.com/" target="_blank">사이트 보기
-					<svg viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm17 7H4v9h16v-9zM5 6v2h2V6H5zm4 0v2h2V6H9z"/></svg>
+				<a href="https://awesomeykorea.com/" target="_blank" rel="noopener noreferrer" aria-label="사이트 보기 (새 창)">사이트 보기
+					<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm17 7H4v9h16v-9zM5 6v2h2V6H5zm4 0v2h2V6H9z"/></svg>
 				</a>
 			</div>
 			<ul class="bottom-right">
 				<li>
-					<a href="./vipsrenewal.html">
+					<a href="./vipsrenewal.html" aria-label="prev, 이전 프로젝트 빕스 리뉴얼">
 						<span>prev</span>
-						<svg viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M7.828 11H20v2H7.828l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414z"/></svg>
+						<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path fill="none" d="M0 0h24v24H0z"/><path d="M7.828 11H20v2H7.828l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414z"/></svg>
 					</a>
 				</li>
 				<li class="go-project-li"> 
-					<a href="./project.html">
-						<svg  viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8 4h13v2H8V4zM4.5 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 6.9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM8 11h13v2H8v-2zm0 7h13v2H8v-2z"/></svg>
+					<a href="./project.html" aria-label="프로젝트 목록으로 이동">
+						<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path fill="none" d="M0 0h24v24H0z"/><path d="M8 4h13v2H8V4zM4.5 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 6.9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM8 11h13v2H8v-2zm0 7h13v2H8v-2z"/></svg>
 					</a>
 				</li>
 				<li>
-					<a href="./ssg.html">
-						<svg viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
+					<a href="./ssg.html" aria-label="next, 다음 프로젝트 신세계 클론 코딩">
+						<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
 						<span>next</span>
 					</a>
 				</li>
 			</ul>
 		</div>
-    </div>
+    </nav>
 	<footer>
 		<div class="footer-wrap width80">
 			<div class="footer-left">
-				<a href="tel:010-3607-8531"  target="_blank">010.3607.8531</a>
-				<a href="mailto:hyemin.k8531@gmail.com"  target="_blank">hyemin.k8531@gmail.com</a>
+				<a href="tel:010-3607-8531">010.3607.8531</a>
+				<a href="mailto:hyemin.k8531@gmail.com">hyemin.k8531@gmail.com</a>
 			</div>
 			<div class="footer-right">
 				copyright ⓒ HYEMIN all rights reserved.
@@ -231,5 +231,6 @@
 <script src="./js/sidemenu.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/sub-page.js"></script>
+<script src="./js/a11y.js"></script>
 </body>
 </html>

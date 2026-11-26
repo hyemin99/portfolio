@@ -1,0 +1,225 @@
+/* =========================================================
+   접근성 보강 스타일 (모든 페이지에서 media.css 다음에 로드)
+   ========================================================= */
+
+/* 스크린리더 전용 텍스트 */
+.sr-only{
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+/* 본문 바로가기 링크 */
+.skip-link{
+	position: fixed;
+	top: -100px;
+	left: 16px;
+	z-index: 10000;
+	padding: 12px 20px;
+	background: #fff;
+	color: #000;
+	font-size: 16px;
+	font-weight: 700;
+	border-radius: 0 0 8px 8px;
+	transition: top 0.2s;
+}
+.skip-link:focus{
+	top: 0;
+}
+#main:focus{
+	outline: none;
+}
+
+/* ---------------------------------------------------------
+   키보드 포커스 표시 (흰 링 + 검은 안쪽 링: 어떤 배경에서도 보임)
+   --------------------------------------------------------- */
+:focus-visible{
+	outline: 3px solid #fff;
+	outline-offset: 3px;
+	box-shadow: 0 0 0 3px #000;
+}
+/* overflow:hidden 부모 안에서 바깥 링이 잘리는 요소는 안쪽으로 표시 */
+.header-wrap a:focus-visible,
+.footer-wrap a:focus-visible,
+#bottom-nav a:focus-visible,
+.project-arrow a:focus-visible,
+.hover-box:focus-visible,
+.go-page:focus-visible,
+.site-btn:focus-visible,
+.resume-btn:focus-visible,
+.contact-container a:focus-visible,
+.side-sns a:focus-visible,
+.side-contact a:focus-visible{
+	outline-offset: -3px;
+	box-shadow: none;
+}
+
+/* 마우스 hover 에서만 보이던 효과를 키보드 포커스에도 동일하게 제공 */
+.hover-box:focus-visible{
+	opacity: 1;
+}
+.hover-box:focus-visible .hover-arr{
+	transform: translateX(0);
+}
+.contact-right .contact-li:focus-visible::before{
+	left: 0;
+}
+.content-img:focus-visible::before{
+	background-color: blue;
+}
+.go-page:focus-visible,
+.site-btn:focus-visible,
+.resume-btn:focus-visible{
+	background-color: blue;
+	color: #fff;
+}
+.side-nav > a:focus-visible::after,
+.header-nav > li a:focus-visible::after{
+	width: 100%;
+	opacity: 1;
+}
+
+/* 스크롤 위치에 따라 화면 밖/투명 처리되는 요소도 포커스를 받으면 보이게 */
+.top-btn:focus-within{
+	bottom: 2% !important;
+}
+#bottom-nav:focus-within{
+	bottom: 0 !important;
+}
+.project-arrow:focus-within{
+	opacity: 1 !important;
+}
+
+/* ---------------------------------------------------------
+   명도 대비 (검은 배경 위 파란색 글씨 2.4:1 → 6.6:1)
+   --------------------------------------------------------- */
+.sub-tit-name,
+.content-num,
+.side-nav > span,
+.main-info .content-info span,
+#sub-page-tit span{
+	color: #5b8cff;
+}
+.footer-right{
+	color: rgba(255, 255, 255, 0.7);
+}
+
+/* ---------------------------------------------------------
+   목록/메뉴 마크업 보정에 따른 스타일
+   --------------------------------------------------------- */
+.side-contact li{
+	display: inline;
+	margin-right: 0.4em;
+}
+#sub-page-tit h1{
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+/* ---------------------------------------------------------
+   슬라이드: 자동재생 정지 버튼 / 페이지네이션 / 화살표
+   --------------------------------------------------------- */
+.slide-autoplay-btn{
+	position: absolute;
+	left: 16px;
+	bottom: 16px;
+	z-index: 999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	padding: 0;
+	border: 1px solid rgba(255, 255, 255, 0.7);
+	border-radius: 50%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+}
+.slide-autoplay-btn svg{
+	width: 18px;
+	height: 18px;
+	fill: #fff;
+}
+.slide-autoplay-btn .ico-play{
+	display: none;
+}
+.slide-autoplay-btn.is-paused .ico-pause{
+	display: none;
+}
+.slide-autoplay-btn.is-paused .ico-play{
+	display: block;
+}
+/* 일시정지하면 슬라이드 안의 장식 애니메이션도 함께 멈춤 */
+.slide-content.is-paused *{
+	animation-play-state: paused !important;
+}
+
+/* 페이지네이션 점을 button 으로 바꾼 것에 대한 초기화 + 터치 영역 24px 확보 */
+button.swiper-pagination-bullet{
+	position: relative;
+	margin: 0 8px !important;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	opacity: 0.7;
+	cursor: pointer;
+}
+button.swiper-pagination-bullet::after{
+	content: "";
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	bottom: -8px;
+	left: -8px;
+}
+button.swiper-pagination-bullet-active{
+	opacity: 1;
+	background-color: #5b8cff;
+	transform: scale(1.4);
+}
+/* 이전/다음 화살표 아이콘 대비 (비텍스트 3:1 이상) */
+#wrap .slide-button-next svg,
+#wrap .slide-button-prev svg{
+	fill: rgba(255, 255, 255, 0.7);
+}
+#wrap .slide-button-next:hover svg,
+#wrap .slide-button-prev:hover svg,
+#wrap .slide-button-next:focus-visible svg,
+#wrap .slide-button-prev:focus-visible svg{
+	fill: #fff;
+}
+
+/* ---------------------------------------------------------
+   동작 줄이기 설정(prefers-reduced-motion)을 켠 사용자
+   --------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce){
+	html{
+		scroll-behavior: auto;
+	}
+	*,
+	*::before,
+	*::after{
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		animation-delay: 0s !important;
+		transition-duration: 0.01ms !important;
+		transition-delay: 0s !important;
+	}
+	[data-aos]{
+		opacity: 1 !important;
+		transform: none !important;
+		transition: none !important;
+		pointer-events: auto !important;
+	}
+	.back-txt-ani,
+	.scroll-dot,
+	.scroll-action::after{
+		animation: none !important;
+	}
+}

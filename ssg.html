@@ -2,20 +2,16 @@
 <html lang="ko">
 <head>
 	<meta charset="utf-8">
-	<title>shinsegae clone</title>
-	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0" />
+	<title>신세계 클론 코딩 | 김혜민 포트폴리오</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta charset="euc-kr">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
-	<meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1" />
-
 
 	<link rel="stylesheet" type="text/css" href="./css/reset.css">
 	<link rel="stylesheet" type="text/css" href="./css/common.css">
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="stylesheet" type="text/css" href="./css/sub-page.css">
 	<link rel="stylesheet" type="text/css" href="./css/media.css">
+	<link rel="stylesheet" type="text/css" href="./css/a11y.css">
 
 	<script src="./js/jquery-3.5.1.min.js"></script>
 	<script src="./lib/side-menu/jquery-ui.min.js"></script>
@@ -48,38 +44,41 @@
 	</style>
 </head>
 <body>
+<a class="skip-link" href="#main">본문 바로가기</a>
 <div id="wrap">
 	<header>
 		<div class="header-wrap uppercase width80">
 			<div class="header-logo">
-				<h1><a href="./index.html">hyemin</a></h1>
+				<a href="./index.html" aria-label="hyemin 홈으로 이동">hyemin</a>
 			</div>
-			<nav class="header-nav">
-				<li class="web-nav"><a href="./index.html">home</a></li>
-				<li class="web-nav"><a href="./about.html">about</a></li>
-				<li class="web-nav"><a href="./project.html">project</a></li>
-				<li class="web-nav"><a href="./contact.html">contact</a></li>
-				<li class="nav-ico"></li>
+			<nav aria-label="주 메뉴">
+				<ul class="header-nav">
+					<li class="web-nav"><a href="./index.html">home</a></li>
+					<li class="web-nav"><a href="./about.html">about</a></li>
+					<li class="web-nav"><a href="./project.html" aria-current="true">project</a></li>
+					<li class="web-nav"><a href="./contact.html">contact</a></li>
+					<li class="nav-ico" aria-hidden="true"></li>
+				</ul>
 			</nav>
 		</div>
 	</header>
-	<div id="hamburger">
+	<div id="hamburger" role="button" tabindex="0" aria-label="전체 메뉴 열기" aria-expanded="false" aria-controls="sidemenu-container">
 		<div class="line01 no-ani"></div>
 		<div class="line02 no-ani"></div>
 		<div class="line03 no-ani"></div>
 	</div>
 	<div id="sidemenu-container"></div>
-	<div class="content-wrap">
+	<main class="content-wrap" id="main" tabindex="-1">
 		<div class="main-section">
 			<div class="bg-wrap">
 				<div class="main-img ssg-main">
-					<img class="main-item" src="./ssg-img/ssg-logo.png" alt="신세계 로고입니다">
+					<img class="main-item" src="./ssg-img/ssg-logo.png" alt="신세계 로고">
 					<div class="project-arrow">
 						<div class="prev-project">
-							<a href="./awesomey.html">
+							<a href="./awesomey.html" aria-label="prev, 이전 프로젝트 어썸와이코리아">
 								prev
-								<svg version="1.1" id="Layer_1" x="0px" y="0px"
-								 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+								<svg version="1.1" x="0px" y="0px"
+								 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" aria-hidden="true" focusable="false">
 									<path d="M501.333,245.333H36.417l141.792-141.792c4.167-4.167,4.167-10.917,0-15.083c-4.167-4.167-10.917-4.167-15.083,0l-160,160
 										c-4.167,4.167-4.167,10.917,0,15.083l160,160c2.083,2.083,4.813,3.125,7.542,3.125c2.729,0,5.458-1.042,7.542-3.125
 										c4.167-4.167,4.167-10.917,0-15.083L36.417,266.667h464.917c5.896,0,10.667-4.771,10.667-10.667S507.229,245.333,501.333,245.333z
@@ -87,20 +86,8 @@
 								</svg>
 							</a>
 						</div>
-						<!-- <div class="next-project">
-							<a href="#">
-								next
-								<svg version="1.1" id="Layer_1" x="0px" y="0px"
-								viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-									<path d="M508.875,248.458l-160-160c-4.167-4.167-10.917-4.167-15.083,0c-4.167,4.167-4.167,10.917,0,15.083l141.792,141.792
-										H10.667C4.771,245.333,0,250.104,0,256s4.771,10.667,10.667,10.667h464.917L333.792,408.458c-4.167,4.167-4.167,10.917,0,15.083
-										c2.083,2.083,4.813,3.125,7.542,3.125c2.729,0,5.458-1.042,7.542-3.125l160-160C513.042,259.375,513.042,252.625,508.875,248.458z
-										"/>
-								</svg>
-							</a>
-						</div> -->
 					</div>
-					<div class="sroll-down">
+					<div class="sroll-down" aria-hidden="true">
 						<div class="main-scroll">
 							<span>Scroll</span>
 							<div class="scroll-dot"></div>
@@ -110,7 +97,7 @@
 			</div>
 		</div>
 		<div class="main-info content-width margin-top">
-			<p class="main-tit">Shinsegae Clone</p>
+			<h1 class="main-tit">Shinsegae Clone</h1>
 			<p class="sub-tit">신세계 클론 코딩</p>
 			<ul class="content-info">
 				<li><span>role</span>퍼블리싱(클론)</li>
@@ -125,17 +112,17 @@
 			<div class="content-site-wrap">
 				<ul class="content-site">
 					<li>
-						<a href="https://hyemin99.github.io/ssg-_clone/" target="_blank" class="site-btn site-arr">
+						<a href="https://hyemin99.github.io/ssg-_clone/" target="_blank" rel="noopener noreferrer" class="site-btn site-arr" aria-label="클론 사이트 가기 (새 창)">
 						클론 사이트 가기
-						<svg viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/>
+						<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="none" d="M0 0h24v24H0z"/>
 							<path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/>
 						</svg>
 						</a>
 					</li>
 					<li>
-						<a href="https://www.shinsegae.com/index.do" target="_blank" class="site-btn site-arr">
+						<a href="https://www.shinsegae.com/index.do" target="_blank" rel="noopener noreferrer" class="site-btn site-arr" aria-label="신세계 사이트 가기 (새 창)">
 						신세계 사이트 가기
-						<svg viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/>
+						<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="none" d="M0 0h24v24H0z"/>
 							<path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/>
 						</svg>
 						</a>
@@ -144,9 +131,9 @@
 			</div>
 		</div>
 		<div id="project-section" class="margin-web">
-			<img src="./ssg-img/ssg-img01.png" alt="신세계 이미지입니다">
+			<img src="./ssg-img/ssg-img01.png" alt="신세계 클론 사이트 메인 화면">
 			<div class="content-width margin-half" data-aos="fade-up">
-				<p class="sub-tit">헤더 넘고 컨텐츠 건너, 푸터로</p>
+				<h2 class="sub-tit">헤더 넘고 컨텐츠 건너, 푸터로</h2>
 				<p class="txt">
 					코딩하기 편한 디자인이 아닌 화려하고 다채로운 구성과 효과. 처음엔 막막한 감정을 많이 느꼈습니다.
 					산 넘고 물 건너는 느낌이였지만, 구글링과 재직 중이신 분들의 도움으로 조금씩 완성해 나아갔습니다.
@@ -154,10 +141,10 @@
 				</p>
 			</div>
 			<div class="width70 margin-half" data-aos="fade-up">
-				<img class="margin-half" src="./ssg-img/ssg-img02.png" alt="신세계 이미지 입니다">
+				<img class="margin-half" src="./ssg-img/ssg-img02.png" alt="신세계 클론 사이트 구현 화면">
 			</div>
 			<div class="content-width margin-top" data-aos="fade-up">
-				<p class="sub-tit">프로젝트 후기</p>
+				<h2 class="sub-tit">프로젝트 후기</h2>
 				<p class="txt">
 					가상 선택자('before','After')의 본격적인 사용을 알 수 있었습니다.
 					코드 검색에서 이미지의 원본을 알 수 있다는 것도 클론을 하며 알게 되었습니다.
@@ -166,48 +153,42 @@
 			</div>
 			<div class="width70 margin-half">
 				<p class="comment">#aos를 사랑하게 된 이유</p>
-				<img class="margin-20" src="./ssg-img/ssg-img04.png" alt="흔한 작업 과정"/>
+				<img class="margin-20" src="./ssg-img/ssg-img04.png" alt="AOS 애니메이션 적용 작업 과정 화면"/>
 				<p class="comment margin-half">#백그라운드 이미지 호버 안녕<br>#넌 너무 어려웠어</p>
-				<img class="margin-20" src="./ssg-img/ssg-img05.png" alt="흔한 작업 과정"/>
+				<img class="margin-20" src="./ssg-img/ssg-img05.png" alt="백그라운드 이미지 호버 효과 작업 과정 화면"/>
 			</div>
 		</div>
-    </div>
-	<div class="scroll-ani">
+    </main>
+	<div class="scroll-ani" aria-hidden="true">
 		<div class="scroll-action"></div><div>SCROLL</div>
 	</div>
-	<div id="bottom-nav">
+	<nav id="bottom-nav" aria-label="프로젝트 이동">
         <div class="width80">
 			<div class="bottom-left">
-				<a href="https://hyemin99.github.io/ssg-_clone/" target="_blank">사이트 보기
-					<svg viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm17 7H4v9h16v-9zM5 6v2h2V6H5zm4 0v2h2V6H9z"/></svg>
+				<a href="https://hyemin99.github.io/ssg-_clone/" target="_blank" rel="noopener noreferrer" aria-label="사이트 보기 (새 창)">사이트 보기
+					<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm17 7H4v9h16v-9zM5 6v2h2V6H5zm4 0v2h2V6H9z"/></svg>
 				</a>
 			</div>
 			<ul class="bottom-right">
 				<li>
-					<a href="./awesomey.html">
+					<a href="./awesomey.html" aria-label="prev, 이전 프로젝트 어썸와이코리아">
 						<span>prev</span>
-						<svg viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M7.828 11H20v2H7.828l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414z"/></svg>
+						<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path fill="none" d="M0 0h24v24H0z"/><path d="M7.828 11H20v2H7.828l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414z"/></svg>
 					</a>
 				</li>
 				<li class="go-project-li"> 
-					<a href="./project.html">
-						<svg  viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8 4h13v2H8V4zM4.5 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 6.9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM8 11h13v2H8v-2zm0 7h13v2H8v-2z"/></svg>
+					<a href="./project.html" aria-label="프로젝트 목록으로 이동">
+						<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path fill="none" d="M0 0h24v24H0z"/><path d="M8 4h13v2H8V4zM4.5 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 6.9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM8 11h13v2H8v-2zm0 7h13v2H8v-2z"/></svg>
 					</a>
-				</li>
-				<li>
-					<!-- <a href="#">
-						<svg viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/></svg>
-						<span>next</span>
-					</a> -->
 				</li>
 			</ul>
 		</div>
-    </div>
+    </nav>
 	<footer>
 		<div class="footer-wrap width80">
 			<div class="footer-left">
-				<a href="tel:010-3607-8531"  target="_blank">010.3607.8531</a>
-				<a href="mailto:hyemin.k8531@gmail.com"  target="_blank">hyemin.k8531@gmail.com</a>
+				<a href="tel:010-3607-8531">010.3607.8531</a>
+				<a href="mailto:hyemin.k8531@gmail.com">hyemin.k8531@gmail.com</a>
 			</div>
 			<div class="footer-right">
 				copyright ⓒ HYEMIN all rights reserved.
@@ -218,5 +199,6 @@
 <script src="./js/sidemenu.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/sub-page.js"></script>
+<script src="./js/a11y.js"></script>
 </body>
 </html>
