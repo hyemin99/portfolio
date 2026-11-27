@@ -104,7 +104,7 @@
     line-height: 20px;
     text-align: right;
     border-radius: 10px;
-    background-color: blue;
+    background-color: #5b8cff;
 }
 .graph.stack01 span.on{
     animation: skill-ani01 2s 1 forwards;
@@ -186,7 +186,7 @@
     right: 0;
     width: 250px;
     height: 250px;
-    background-color: blue;
+    background-color: #5b8cff;
     border-radius: 100%;
     z-index: -1;
 }
@@ -214,7 +214,7 @@
 }
 .resume-btn:hover{
     color: #fff;
-    background-color: blue;
+    background-color: #5b8cff;
 	transition: 0.5s ease;
 }
 .resume-btn svg{

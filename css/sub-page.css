@@ -112,7 +112,7 @@
     text-transform: uppercase;
     margin-right: 10px;
     font-weight: 700;
-    color: blue;
+    color: #5b8cff;
 }
 .main-info .txt{
     text-align: justify;
@@ -142,7 +142,7 @@
 }
 .site-btn:hover{
     color: #fff;
-    background-color: blue;
+    background-color: #5b8cff;
 	transition: 0.5s ease;
 }
 .site-btn svg{
@@ -243,7 +243,7 @@
     background-color: rgba(0, 0, 255, 0.5);
 }
 .go-project-li a:hover{
-    background-color: blue;
+    background-color: #5b8cff;
 }
 #bottom-nav a{
     color: rgba(255, 255, 255, 0.8);
